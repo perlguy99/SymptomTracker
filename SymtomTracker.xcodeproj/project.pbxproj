@@ -8,8 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */; };
-		AF718FE02416721F00DDF850 /* DeleteMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDF2416721F00DDF850 /* DeleteMe.swift */; };
 		AF718FE22416723500DDF850 /* DeleteMe.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE12416723400DDF850 /* DeleteMe.swift */; };
+		AF718FE4241674FA00DDF850 /* Deleteme3.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE3241674FA00DDF850 /* Deleteme3.swift */; };
 		AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1124115B4500D69F5E /* AppDelegate.swift */; };
 		AF7DAA1424115B4500D69F5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */; };
 		AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */; };
@@ -45,8 +45,8 @@
 
 /* Begin PBXFileReference section */
 		AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
-		AF718FDF2416721F00DDF850 /* DeleteMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMe.swift; sourceTree = "<group>"; };
 		AF718FE12416723400DDF850 /* DeleteMe.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeleteMe.swift; sourceTree = "<group>"; };
+		AF718FE3241674FA00DDF850 /* Deleteme3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Deleteme3.swift; sourceTree = "<group>"; };
 		AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymtomTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7DAA1124115B4500D69F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -95,7 +95,6 @@
 		AF7DAA0524115B4500D69F5E = {
 			isa = PBXGroup;
 			children = (
-				AF718FDF2416721F00DDF850 /* DeleteMe.swift */,
 				AF7DAA1024115B4500D69F5E /* SymtomTracker */,
 				AF7DAA2A24115B4700D69F5E /* SymtomTrackerTests */,
 				AF7DAA0F24115B4500D69F5E /* Products */,
@@ -165,6 +164,7 @@
 				AF7DAA3F2411689B00D69F5E /* EmptySymptomsView.swift */,
 				AF7DAA41241168F500D69F5E /* SymptomsListView.swift */,
 				AF7DAA4324116A0300D69F5E /* SymptomView.swift */,
+				AF718FE3241674FA00DDF850 /* Deleteme3.swift */,
 			);
 			path = Symptoms;
 			sourceTree = "<group>";
@@ -292,8 +292,8 @@
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
-				AF718FE02416721F00DDF850 /* DeleteMe.swift in Sources */,
 				AF7DAA4A241170F700D69F5E /* InstanceView.swift in Sources */,
+				AF718FE4241674FA00DDF850 /* Deleteme3.swift in Sources */,
 				AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */,
 				AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */,
 				AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass.swift in Sources */,
