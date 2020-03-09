@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="15702" systemVersion="18G2022" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Instance" representedClassName="Instance" syncable="YES">
+        <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="note" optional="YES" attributeType="String"/>
+        <attribute name="severity" optional="YES" attributeType="String"/>
+        <attribute name="symptomId" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="trigger" optional="YES" attributeType="String"/>
+        <relationship name="ofSymptom" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symptom" inverseName="instances" inverseEntity="Symptom"/>
+    </entity>
+    <entity name="Symptom" representedClassName="Symptom" syncable="YES">
+        <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <attribute name="name" optional="YES" attributeType="String"/>
+        <relationship name="instances" optional="YES" toMany="YES" deletionRule="Cascade" destinationEntity="Instance" inverseName="ofSymptom" inverseEntity="Instance"/>
+    </entity>
+    <elements>
+        <element name="Instance" positionX="263.87890625" positionY="-259.859375" width="128" height="148"/>
+        <element name="Symptom" positionX="-29.72265625" positionY="-345.51953125" width="128" height="88"/>
+    </elements>
+</model>
