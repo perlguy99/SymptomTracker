@@ -51,7 +51,11 @@ struct AddInstanceView: View {
                 Button(action: {
                     self.addInstance()
                 }) {
-                    Text("Add Instance")
+                    HStack {
+                        Spacer()
+                        Text("Add Instance")
+                        Spacer()
+                    }
                 }
             }
         }
@@ -59,8 +63,6 @@ struct AddInstanceView: View {
     
     
     func addInstance() {
-        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
         let instance = Instance(context: context)
         instance.id        = UUID()
         instance.symptomId = symptom.id

@@ -18,13 +18,33 @@ struct AddSymptomView: View {
     
     var body: some View {
         VStack {
-            Text("Name of Symptom")
-            TextField("Symptom", text: $symptomName)
+            Form {
+                Section(header: Text("Symptom Name")) {
+                    TextField("Symptom", text: $symptomName)
+                    .textFieldStyle(RoundedBorderTextFieldStyle())
+                }
+                
+                Section {
+                    Button(action: buttonTapped) {
+                        HStack {
+                            Spacer()
+                            Text("Done")
+                            Spacer()
+                        }
+                    }
+                }
+            }
+            
         }
         .navigationBarTitle("Add New Symptom")
         .onDisappear(perform: addSymptom)
     }
- 
+    
+    
+    func buttonTapped() {
+        self.presentationMode.wrappedValue.dismiss()
+    }
+    
     func addSymptom() {
         let symptom = Symptom(context: context)
         symptom.id = UUID()

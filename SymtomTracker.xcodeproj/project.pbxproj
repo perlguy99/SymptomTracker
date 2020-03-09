@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */; };
+		AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */; };
 		AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1124115B4500D69F5E /* AppDelegate.swift */; };
 		AF7DAA1424115B4500D69F5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */; };
 		AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */; };
@@ -43,6 +44,7 @@
 
 /* Begin PBXFileReference section */
 		AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
+		AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailView.swift; sourceTree = "<group>"; };
 		AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymtomTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7DAA1124115B4500D69F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -166,8 +168,9 @@
 		AF7DAA522411829700D69F5E /* Instances */ = {
 			isa = PBXGroup;
 			children = (
-				AF7DAA532411840A00D69F5E /* InstanceCell.swift */,
 				AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */,
+				AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */,
+				AF7DAA532411840A00D69F5E /* InstanceCell.swift */,
 				AF7DAA49241170F700D69F5E /* InstanceView.swift */,
 				AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */,
 				AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */,
@@ -284,6 +287,7 @@
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
 				AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */,
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
+				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
 				AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
 				AF7DAA4A241170F700D69F5E /* InstanceView.swift in Sources */,

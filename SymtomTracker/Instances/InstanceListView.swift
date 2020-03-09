@@ -19,7 +19,7 @@ struct InstanceListView: View {
             List {
                 FilteredInstanceList(filter: symptom.wrappedId)
             }
-            .navigationBarTitle("Instances")
+            .navigationBarTitle("\(symptom.wrappedName) Instances")
             .navigationBarItems(trailing:
                 NavigationLink(destination: AddInstanceView(symptom: symptom) ) {
                     Text("Add")

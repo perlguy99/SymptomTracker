@@ -10,13 +10,14 @@ import SwiftUI
 
 struct FilteredInstanceList: View {
     var fetchRequest: FetchRequest<Instance>
-    
-    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    @Environment(\.managedObjectContext) var context
     
     var body: some View {
         ForEach(fetchRequest.wrappedValue, id: \.self) { instance in
             HStack {
-                InstanceCell(instance: instance)
+                NavigationLink(destination: InstanceDetailView(instance: instance)) {
+                    InstanceCell(instance: instance)
+                }
             }
         }
         .onDelete(perform: removeItems)

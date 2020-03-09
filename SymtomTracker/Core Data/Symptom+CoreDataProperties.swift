@@ -29,22 +29,22 @@ extension Symptom {
         id ?? UUID()
     }
     
-    public var instanceArray: [Instance] {
-        let set = instances as? Set<Instance> ?? []
-        return set.sorted {
-            $0.dateTime! < $1.dateTime!
-        }
-    }
-    
-    public var instanceArray2: [Instance] {
-        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Instance")
-        let predicate    = NSPredicate(format: "symptomId = %@", self.id!)
-        let context      = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-        
-        fetchRequest.predicate = predicate
-        let records = try! context.fetch(fetchRequest) as! [Instance]
-        return records
-    }
+//    public var instanceArray: [Instance] {
+//        let set = instances as? Set<Instance> ?? []
+//        return set.sorted {
+//            $0.dateTime! < $1.dateTime!
+//        }
+//    }
+//    
+//    public var instanceArray2: [Instance] {
+//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Instance")
+//        let predicate    = NSPredicate(format: "symptomId = %@", self.id!)
+//        let context      = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+//        
+//        fetchRequest.predicate = predicate
+//        let records = try! context.fetch(fetchRequest) as! [Instance]
+//        return records
+//    }
 }
 
 

@@ -13,10 +13,12 @@ struct ContentView: View {
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: []) var symptoms: FetchedResults<Symptom>
     
     @State private var showingAddSymptomView = false
+    @State var selectedView = 0
     
     var body: some View {
         
-        TabView {
+        TabView(selection: $selectedView) {
+//        TabView {
             
             NavigationView {
                 SymptomView()
@@ -28,14 +30,20 @@ struct ContentView: View {
                 )
             } // NavigationView
                 .tabItem {
-                    Image(systemName: "1.circle")
-                    Text("Symptoms")
+                    if selectedView == 0 {
+                        Image(systemName: "bandage.fill")
+                        Text("Symptoms")
+                    }
+                    else {
+                        Image(systemName: "bandage")
+                        Text("Symptoms")
+                    }
             }.tag(0)
             
             
             Text("SecondView")
                 .tabItem {
-                    Image(systemName: "2.circle")
+                    Image(systemName: "waveform.path.ecg")
                     Text("Statistics")
             }.tag(1)
             
