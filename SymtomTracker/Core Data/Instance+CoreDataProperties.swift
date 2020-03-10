@@ -2,14 +2,14 @@
 //  Instance+CoreDataProperties.swift
 //  SymtomTracker
 //
-//  Created by Michalski (US), James B on 3/5/20.
+//  Created by Michalski (US), James B on 3/10/20.
 //  Copyright © 2020 Perlguy, Inc. All rights reserved.
 //
 //
-
+import SwiftUI
 import Foundation
 import CoreData
-import SwiftUI
+
 
 extension Instance {
 
@@ -20,11 +20,50 @@ extension Instance {
     @NSManaged public var dateTime: Date?
     @NSManaged public var id: UUID?
     @NSManaged public var note: String?
-    @NSManaged public var trigger: String?
     @NSManaged public var severity: String?
-    @NSManaged public var ofSymptom: Symptom?
-    @NSManaged public var symptomId: UUID?
+    @NSManaged public var symptoms: Symptom?
+    @NSManaged public var trigger: NSOrderedSet?
 
+}
+
+// MARK: Generated accessors for trigger
+extension Instance {
+
+    @objc(insertObject:inTriggerAtIndex:)
+    @NSManaged public func insertIntoTrigger(_ value: Trigger, at idx: Int)
+
+    @objc(removeObjectFromTriggerAtIndex:)
+    @NSManaged public func removeFromTrigger(at idx: Int)
+
+    @objc(insertTrigger:atIndexes:)
+    @NSManaged public func insertIntoTrigger(_ values: [Trigger], at indexes: NSIndexSet)
+
+    @objc(removeTriggerAtIndexes:)
+    @NSManaged public func removeFromTrigger(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInTriggerAtIndex:withObject:)
+    @NSManaged public func replaceTrigger(at idx: Int, with value: Trigger)
+
+    @objc(replaceTriggerAtIndexes:withTrigger:)
+    @NSManaged public func replaceTrigger(at indexes: NSIndexSet, with values: [Trigger])
+
+    @objc(addTriggerObject:)
+    @NSManaged public func addToTrigger(_ value: Trigger)
+
+    @objc(removeTriggerObject:)
+    @NSManaged public func removeFromTrigger(_ value: Trigger)
+
+    @objc(addTrigger:)
+    @NSManaged public func addToTrigger(_ values: NSOrderedSet)
+
+    @objc(removeTrigger:)
+    @NSManaged public func removeFromTrigger(_ values: NSOrderedSet)
+
+}
+
+
+extension Instance {
+    
     public var stringDateTime: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM y @ HH:mm"
@@ -44,9 +83,6 @@ extension Instance {
         note ?? ""
     }
     
-    public var wrappedTrigger: String {
-        trigger ?? ""
-    }
     
     public var hasNote: Bool {
         (note != nil) ? true : false
@@ -55,6 +91,7 @@ extension Instance {
     public var hasTrigger: Bool {
         (trigger != nil) ? true : false
     }
+    
     
     public var noteImage: Image {
         if hasNote {
@@ -74,6 +111,7 @@ extension Instance {
         }
     }
 
+    
     public var stringDate: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "d MMM y"
@@ -95,4 +133,10 @@ extension Instance {
         
         return "No Time"
     }
+    
 }
+
+
+extension Instance: Identifiable { }
+
+

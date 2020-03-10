@@ -7,6 +7,15 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AF03E48824181497007207D6 /* Trigger+CoreDataClass_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48624181497007207D6 /* Trigger+CoreDataClass_OLD.swift */; };
+		AF03E48924181497007207D6 /* Trigger+CoreDataProperties_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48724181497007207D6 /* Trigger+CoreDataProperties_OLD.swift */; };
+		AF03E49524181B61007207D6 /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */; };
+		AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */; };
+		AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */; };
+		AF03E49824181B61007207D6 /* Trigger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49224181B61007207D6 /* Trigger+CoreDataProperties.swift */; };
+		AF03E49924181B61007207D6 /* Symptom+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */; };
+		AF03E49A24181B61007207D6 /* Symptom+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */; };
+		AF03E4A424182548007207D6 /* FilteredInstanceList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */; };
 		AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */; };
 		AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */; };
 		AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1124115B4500D69F5E /* AppDelegate.swift */; };
@@ -17,10 +26,10 @@
 		AF7DAA1E24115B4700D69F5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7DAA1D24115B4700D69F5E /* Preview Assets.xcassets */; };
 		AF7DAA2124115B4700D69F5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7DAA1F24115B4700D69F5E /* LaunchScreen.storyboard */; };
 		AF7DAA2C24115B4700D69F5E /* SymtomTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA2B24115B4700D69F5E /* SymtomTrackerTests.swift */; };
-		AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass.swift */; };
-		AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties.swift */; };
-		AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass.swift */; };
-		AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties.swift */; };
+		AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass_OLD.swift */; };
+		AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift */; };
+		AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift */; };
+		AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift */; };
 		AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3F2411689B00D69F5E /* EmptySymptomsView.swift */; };
 		AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA41241168F500D69F5E /* SymptomsListView.swift */; };
 		AF7DAA4424116A0300D69F5E /* SymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4324116A0300D69F5E /* SymptomView.swift */; };
@@ -30,6 +39,7 @@
 		AF7DAA4E241173EE00D69F5E /* InstanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */; };
 		AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */; };
 		AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA532411840A00D69F5E /* InstanceCell.swift */; };
+		AF8ADC8A2417F4B200D4A3FD /* ChartView-master in Resources */ = {isa = PBXBuildFile; fileRef = AF8ADC892417F4B200D4A3FD /* ChartView-master */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +53,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		AF03E48624181497007207D6 /* Trigger+CoreDataClass_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataClass_OLD.swift"; sourceTree = "<group>"; };
+		AF03E48724181497007207D6 /* Trigger+CoreDataProperties_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataProperties_OLD.swift"; sourceTree = "<group>"; };
+		AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF03E49224181B61007207D6 /* Trigger+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass.swift"; sourceTree = "<group>"; };
+		AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList2.swift; sourceTree = "<group>"; };
 		AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
 		AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailView.swift; sourceTree = "<group>"; };
 		AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymtomTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -57,10 +76,10 @@
 		AF7DAA2724115B4700D69F5E /* SymtomTrackerTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SymtomTrackerTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7DAA2B24115B4700D69F5E /* SymtomTrackerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymtomTrackerTests.swift; sourceTree = "<group>"; };
 		AF7DAA2D24115B4700D69F5E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass.swift"; sourceTree = "<group>"; };
-		AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass_OLD.swift"; sourceTree = "<group>"; };
+		AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties_OLD.swift"; sourceTree = "<group>"; };
+		AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass_OLD.swift"; sourceTree = "<group>"; };
+		AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties_OLD.swift"; sourceTree = "<group>"; };
 		AF7DAA3F2411689B00D69F5E /* EmptySymptomsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptySymptomsView.swift; sourceTree = "<group>"; };
 		AF7DAA41241168F500D69F5E /* SymptomsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomsListView.swift; sourceTree = "<group>"; };
 		AF7DAA4324116A0300D69F5E /* SymptomView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomView.swift; sourceTree = "<group>"; };
@@ -70,6 +89,7 @@
 		AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceListView.swift; sourceTree = "<group>"; };
 		AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstanceView.swift; sourceTree = "<group>"; };
 		AF7DAA532411840A00D69F5E /* InstanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceCell.swift; sourceTree = "<group>"; };
+		AF8ADC892417F4B200D4A3FD /* ChartView-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "ChartView-master"; path = "../ChartView-master"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -93,6 +113,7 @@
 		AF7DAA0524115B4500D69F5E = {
 			isa = PBXGroup;
 			children = (
+				AF8ADC892417F4B200D4A3FD /* ChartView-master */,
 				AF7DAA1024115B4500D69F5E /* SymtomTracker */,
 				AF7DAA2A24115B4700D69F5E /* SymtomTrackerTests */,
 				AF7DAA0F24115B4500D69F5E /* Products */,
@@ -146,10 +167,18 @@
 		AF7DAA3E24115F7D00D69F5E /* Core Data */ = {
 			isa = PBXGroup;
 			children = (
-				AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass.swift */,
-				AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties.swift */,
-				AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass.swift */,
-				AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties.swift */,
+				AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */,
+				AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */,
+				AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */,
+				AF03E49224181B61007207D6 /* Trigger+CoreDataProperties.swift */,
+				AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */,
+				AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */,
+				AF03E48624181497007207D6 /* Trigger+CoreDataClass_OLD.swift */,
+				AF03E48724181497007207D6 /* Trigger+CoreDataProperties_OLD.swift */,
+				AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass_OLD.swift */,
+				AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift */,
+				AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift */,
+				AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift */,
 			);
 			path = "Core Data";
 			sourceTree = "<group>";
@@ -174,6 +203,7 @@
 				AF7DAA49241170F700D69F5E /* InstanceView.swift */,
 				AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */,
 				AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */,
+				AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */,
 				AF7DAA4B241173BA00D69F5E /* EmptyInstanceView.swift */,
 			);
 			path = Instances;
@@ -262,6 +292,7 @@
 			files = (
 				AF7DAA2124115B4700D69F5E /* LaunchScreen.storyboard in Resources */,
 				AF7DAA1E24115B4700D69F5E /* Preview Assets.xcassets in Resources */,
+				AF8ADC8A2417F4B200D4A3FD /* ChartView-master in Resources */,
 				AF7DAA1B24115B4700D69F5E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,23 +311,32 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF03E49524181B61007207D6 /* Instance+CoreDataClass.swift in Sources */,
 				AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */,
 				AF7DAA1424115B4500D69F5E /* SceneDelegate.swift in Sources */,
+				AF03E49924181B61007207D6 /* Symptom+CoreDataClass.swift in Sources */,
+				AF03E49A24181B61007207D6 /* Symptom+CoreDataProperties.swift in Sources */,
+				AF03E49824181B61007207D6 /* Trigger+CoreDataProperties.swift in Sources */,
 				AF7DAA4424116A0300D69F5E /* SymptomView.swift in Sources */,
 				AF7DAA4E241173EE00D69F5E /* InstanceListView.swift in Sources */,
+				AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
 				AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */,
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
-				AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties.swift in Sources */,
+				AF03E48924181497007207D6 /* Trigger+CoreDataProperties_OLD.swift in Sources */,
+				AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
+				AF03E48824181497007207D6 /* Trigger+CoreDataClass_OLD.swift in Sources */,
+				AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */,
 				AF7DAA4A241170F700D69F5E /* InstanceView.swift in Sources */,
 				AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */,
+				AF03E4A424182548007207D6 /* FilteredInstanceList2.swift in Sources */,
 				AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */,
-				AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass.swift in Sources */,
-				AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass.swift in Sources */,
+				AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass_OLD.swift in Sources */,
+				AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift in Sources */,
 				AF7DAA4824116BAA00D69F5E /* AddSymptomView.swift in Sources */,
-				AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties.swift in Sources */,
+				AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,
 				AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */,
 			);

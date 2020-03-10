@@ -1,5 +1,5 @@
 //
-//  Symptom+CoreDataClass.swift
+//  Trigger+CoreDataClass.swift
 //  SymtomTracker
 //
 //  Created by Michalski (US), James B on 3/10/20.
@@ -10,7 +10,7 @@
 import Foundation
 import CoreData
 
-@objc(Symptom)
-public class Symptom: NSManagedObject {
+@objc(Trigger)
+public class Trigger: NSManagedObject {
 
 }

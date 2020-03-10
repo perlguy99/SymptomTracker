@@ -2,11 +2,11 @@
 //  Symptom+CoreDataProperties.swift
 //  SymtomTracker
 //
-//  Created by Michalski (US), James B on 3/5/20.
+//  Created by Michalski (US), James B on 3/10/20.
 //  Copyright © 2020 Perlguy, Inc. All rights reserved.
 //
 //
-import SwiftUI
+
 import Foundation
 import CoreData
 
@@ -19,37 +19,30 @@ extension Symptom {
 
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var instances: NSSet?
+    @NSManaged public var instances: NSOrderedSet?
 
-    public var wrappedName: String {
-        name ?? ""
-    }
-    
-    public var wrappedId: UUID {
-        id ?? UUID()
-    }
-    
-//    public var instanceArray: [Instance] {
-//        let set = instances as? Set<Instance> ?? []
-//        return set.sorted {
-//            $0.dateTime! < $1.dateTime!
-//        }
-//    }
-//    
-//    public var instanceArray2: [Instance] {
-//        let fetchRequest = NSFetchRequest<NSFetchRequestResult>(entityName: "Instance")
-//        let predicate    = NSPredicate(format: "symptomId = %@", self.id!)
-//        let context      = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-//        
-//        fetchRequest.predicate = predicate
-//        let records = try! context.fetch(fetchRequest) as! [Instance]
-//        return records
-//    }
 }
-
 
 // MARK: Generated accessors for instances
 extension Symptom {
+
+    @objc(insertObject:inInstancesAtIndex:)
+    @NSManaged public func insertIntoInstances(_ value: Instance, at idx: Int)
+
+    @objc(removeObjectFromInstancesAtIndex:)
+    @NSManaged public func removeFromInstances(at idx: Int)
+
+    @objc(insertInstances:atIndexes:)
+    @NSManaged public func insertIntoInstances(_ values: [Instance], at indexes: NSIndexSet)
+
+    @objc(removeInstancesAtIndexes:)
+    @NSManaged public func removeFromInstances(at indexes: NSIndexSet)
+
+    @objc(replaceObjectInInstancesAtIndex:withObject:)
+    @NSManaged public func replaceInstances(at idx: Int, with value: Instance)
+
+    @objc(replaceInstancesAtIndexes:withInstances:)
+    @NSManaged public func replaceInstances(at indexes: NSIndexSet, with values: [Instance])
 
     @objc(addInstancesObject:)
     @NSManaged public func addToInstances(_ value: Instance)
@@ -58,14 +51,29 @@ extension Symptom {
     @NSManaged public func removeFromInstances(_ value: Instance)
 
     @objc(addInstances:)
-    @NSManaged public func addToInstances(_ values: NSSet)
+    @NSManaged public func addToInstances(_ values: NSOrderedSet)
 
     @objc(removeInstances:)
-    @NSManaged public func removeFromInstances(_ values: NSSet)
+    @NSManaged public func removeFromInstances(_ values: NSOrderedSet)
 
 }
 
 
-extension UUID: CVarArg {
+extension Symptom {
     
+    public var wrappedName: String {
+        name ?? ""
+    }
+    
+    
+}
+
+
+extension Symptom: Identifiable { }
+
+
+extension Symptom {
+    var typedInstances: [Instance] {
+        return (instances?.array as? [Instance]) ?? []
+    }
 }

@@ -65,15 +65,14 @@ struct AddInstanceView: View {
     func addInstance() {
         let instance = Instance(context: context)
         instance.id        = UUID()
-        instance.symptomId = symptom.id
         
         if !note.isEmpty {
             instance.note = note
         }
         
-        if !trigger.isEmpty {
-            instance.trigger = trigger
-        }
+//        if !trigger.isEmpty {
+//            instance.trigger = trigger
+//        }
         
         instance.dateTime = dateTime
         instance.severity = intensityArray[selectedIntensity]

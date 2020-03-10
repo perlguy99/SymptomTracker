@@ -2,7 +2,7 @@
 //  Instance+CoreDataClass.swift
 //  SymtomTracker
 //
-//  Created by Michalski (US), James B on 3/5/20.
+//  Created by Michalski (US), James B on 3/10/20.
 //  Copyright © 2020 Perlguy, Inc. All rights reserved.
 //
 //

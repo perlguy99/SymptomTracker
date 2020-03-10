@@ -13,7 +13,8 @@ struct InstanceDetailView: View {
     
     var body: some View {
         VStack {
-            Text("\(instance.ofSymptom?.wrappedName ?? "") Instance")
+            Text("Instance Foo")
+//            Text("\(instance.ofSymptom?.wrappedName ?? "") Instance")
                 .font(.largeTitle)
             
             Form {
@@ -33,7 +34,8 @@ struct InstanceDetailView: View {
                 }
 
                 Section(header: Text("Trigger")) {
-                    Text(instance.wrappedTrigger)
+                    Text("Trigger Name")
+//                    Text(instance.wrappedTrigger)
                 }
             }
         }

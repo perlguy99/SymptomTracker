@@ -17,7 +17,7 @@ struct InstanceListView: View {
             InstanceCellHeader()
             
             List {
-                FilteredInstanceList(filter: symptom.wrappedId)
+                FilteredInstanceList2(symptom: symptom)
             }
             .navigationBarTitle("\(symptom.wrappedName) Instances")
             .navigationBarItems(trailing:

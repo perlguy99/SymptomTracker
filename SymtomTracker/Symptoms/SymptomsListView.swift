@@ -14,13 +14,17 @@ struct SymptomsListView: View {
     
     var body: some View {
         List {
-            ForEach(symptoms, id: \.self) { symptom in
-                NavigationLink(destination: InstanceView(symptom: symptom)) {
-                    Text(symptom.wrappedName)
+            Section(header: Text("Tracked Symptoms")) {
+                
+                ForEach(symptoms, id: \.self) { symptom in
+                    NavigationLink(destination: InstanceView(symptom: symptom)) {
+                        Text(symptom.wrappedName)
+                    }
                 }
+                .onDelete(perform: removeItems)
             }
-            .onDelete(perform: removeItems)
         }
+        
     }
     
     func removeItems(at offsets: IndexSet) {
