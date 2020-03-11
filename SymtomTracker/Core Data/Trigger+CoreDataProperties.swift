@@ -24,3 +24,17 @@ extension Trigger {
 }
 
 extension Trigger: Identifiable { }
+
+
+extension Trigger {
+    
+    func allTriggers() {
+        
+    }
+//    var allTriggers: [Trigger] {
+//
+//        return Self.fetchRequest()
+//
+////        FetchRequestTrigger
+//    }
+}

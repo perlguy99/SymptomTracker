@@ -18,7 +18,6 @@ struct ContentView: View {
     var body: some View {
         
         TabView(selection: $selectedView) {
-//        TabView {
             
             NavigationView {
                 SymptomView()

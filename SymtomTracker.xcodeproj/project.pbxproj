@@ -16,6 +16,8 @@
 		AF03E49924181B61007207D6 /* Symptom+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */; };
 		AF03E49A24181B61007207D6 /* Symptom+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */; };
 		AF03E4A424182548007207D6 /* FilteredInstanceList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */; };
+		AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF339DCB24193B120060192C /* ButtonCenteredText.swift */; };
+		AF339DCF24195D8A0060192C /* AddTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF339DCE24195D8A0060192C /* AddTriggerView.swift */; };
 		AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */; };
 		AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */; };
 		AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1124115B4500D69F5E /* AppDelegate.swift */; };
@@ -62,6 +64,8 @@
 		AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList2.swift; sourceTree = "<group>"; };
+		AF339DCB24193B120060192C /* ButtonCenteredText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCenteredText.swift; sourceTree = "<group>"; };
+		AF339DCE24195D8A0060192C /* AddTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTriggerView.swift; sourceTree = "<group>"; };
 		AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
 		AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailView.swift; sourceTree = "<group>"; };
 		AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymtomTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -110,6 +114,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		AF339DCD24195D780060192C /* Triggers */ = {
+			isa = PBXGroup;
+			children = (
+				AF339DCE24195D8A0060192C /* AddTriggerView.swift */,
+			);
+			path = Triggers;
+			sourceTree = "<group>";
+		};
 		AF7DAA0524115B4500D69F5E = {
 			isa = PBXGroup;
 			children = (
@@ -136,6 +148,7 @@
 				AF7DAA1124115B4500D69F5E /* AppDelegate.swift */,
 				AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */,
 				AF7DAA1824115B4500D69F5E /* ContentView.swift */,
+				AF339DCD24195D780060192C /* Triggers */,
 				AF7DAA512411828E00D69F5E /* Symptoms */,
 				AF7DAA522411829700D69F5E /* Instances */,
 				AF7DAA1A24115B4700D69F5E /* Assets.xcassets */,
@@ -190,6 +203,7 @@
 				AF7DAA3F2411689B00D69F5E /* EmptySymptomsView.swift */,
 				AF7DAA41241168F500D69F5E /* SymptomsListView.swift */,
 				AF7DAA4324116A0300D69F5E /* SymptomView.swift */,
+				AF339DCB24193B120060192C /* ButtonCenteredText.swift */,
 			);
 			path = Symptoms;
 			sourceTree = "<group>";
@@ -322,6 +336,7 @@
 				AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
 				AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */,
+				AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */,
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
 				AF03E48924181497007207D6 /* Trigger+CoreDataProperties_OLD.swift in Sources */,
@@ -335,6 +350,7 @@
 				AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */,
 				AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass_OLD.swift in Sources */,
 				AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift in Sources */,
+				AF339DCF24195D8A0060192C /* AddTriggerView.swift in Sources */,
 				AF7DAA4824116BAA00D69F5E /* AddSymptomView.swift in Sources */,
 				AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,

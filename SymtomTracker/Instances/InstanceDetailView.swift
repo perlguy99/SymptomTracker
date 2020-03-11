@@ -34,7 +34,14 @@ struct InstanceDetailView: View {
                 }
 
                 Section(header: Text("Trigger")) {
-                    Text("Trigger Name")
+                    
+                    if instance.hasTrigger {
+                        Text(instance.typedTrigger[0].name ?? "")
+                    }
+                    else {
+                        Text("No Trigger Selected").font(.caption)
+                    }
+//                    Text("Trigger Name")
 //                    Text(instance.wrappedTrigger)
                 }
             }

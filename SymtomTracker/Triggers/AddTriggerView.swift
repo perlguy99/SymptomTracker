@@ -1,25 +1,25 @@
 //
-//  AddSymptomView.swift
+//  AddTriggerView.swift
 //  SymtomTracker
 //
-//  Created by Michalski (US), James B on 3/5/20.
+//  Created by Michalski (US), James B on 3/11/20.
 //  Copyright © 2020 Perlguy, Inc. All rights reserved.
 //
 
 import SwiftUI
 import CoreData
 
-struct AddSymptomView: View {
+struct AddTriggerView: View {
     let context: NSManagedObjectContext
-    
+    @FetchRequest(entity: Trigger.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var triggers: FetchedResults<Trigger>
     @Environment(\.presentationMode) var presentationMode
-    @State private var symptomName = ""
+    @State private var triggerName = ""
     
     var body: some View {
         VStack {
             Form {
-                Section(header: Text("Symptom Name")) {
-                    TextField("Symptom", text: $symptomName)
+                Section(header: Text("Trigger Name")) {
+                    TextField("Trigger", text: $triggerName)
                         .textFieldStyle(RoundedBorderTextFieldStyle())
                 }
                 
@@ -28,8 +28,8 @@ struct AddSymptomView: View {
                 }
             }
         }
-        .navigationBarTitle("Add New Symptom")
-        .onDisappear(perform: addSymptom)
+        .navigationBarTitle("Add New Trigger")
+        .onDisappear(perform: addTrigger)
     }
     
     
@@ -39,13 +39,13 @@ struct AddSymptomView: View {
     }
     
     
-    func addSymptom() {
-        print("\nADD SYMPTOM\n")
+    func addTrigger() {
+        print("\nADD TRIGGER\n")
         
-        if !symptomName.isEmpty {
-            let symptom = Symptom(context: context)
-            symptom.id   = UUID()
-            symptom.name = symptomName
+        if !triggerName.isEmpty {
+            let trigger = Trigger(context: context)
+            trigger.id = UUID()
+            trigger.name = triggerName
             
             do {
                 try context.save()

@@ -89,7 +89,11 @@ extension Instance {
     }
     
     public var hasTrigger: Bool {
-        (trigger != nil) ? true : false
+        if trigger?.count ?? 0 > 0 {
+            return true
+        }
+        
+        return false
     }
     
     
@@ -140,3 +144,8 @@ extension Instance {
 extension Instance: Identifiable { }
 
 
+extension Instance {
+    var typedTrigger: [Trigger] {
+        return (trigger?.array as? [Trigger]) ?? []
+    }
+}
