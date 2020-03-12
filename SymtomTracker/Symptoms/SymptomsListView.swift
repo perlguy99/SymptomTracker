@@ -7,10 +7,13 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct SymptomsListView: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var symptoms: FetchedResults<Symptom>
+    
+    @EnvironmentObject var selectedTriggersEnv: SelectedTriggers
     
     var body: some View {
         List {
@@ -18,7 +21,11 @@ struct SymptomsListView: View {
                 
                 ForEach(symptoms, id: \.self) { symptom in
                     NavigationLink(destination: InstanceView(symptom: symptom)) {
-                        Text(symptom.wrappedName)
+                        HStack {
+                            Text(symptom.wrappedName)
+                            Spacer()
+                            Text(symptom.instanceCount).font(.caption)
+                        }
                     }
                 }
                 .onDelete(perform: removeItems)

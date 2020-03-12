@@ -11,7 +11,8 @@ import SwiftUI
 struct SymptomView: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: []) var symptoms: FetchedResults<Symptom>
-
+    
+    @EnvironmentObject var selectedTriggersEnv: SelectedTriggers
     
     var body: some View {
         if symptoms.count > 0 {

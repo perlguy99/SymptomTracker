@@ -23,6 +23,8 @@ struct AddInstanceView: View {
     
     @State private var selectedTrigger   = 999
     
+    @EnvironmentObject var selectedTriggersEnv: SelectedTriggers
+    
     var symptom: Symptom
     var intensityArray = ["Low", "Moderate", "Severe"]
     
@@ -32,7 +34,7 @@ struct AddInstanceView: View {
             Text("Add New Instance").font(.largeTitle)
             
             Form {
-                Section(header: Text("Date")) {
+                Section(header: Text("Date of Instance")) {
                     VStack {
                         DatePicker(selection: $dateTime, in: ...Date()) {
                             Text("Date")
@@ -52,37 +54,42 @@ struct AddInstanceView: View {
                     TextField("Note", text: $note)
                 }
                 
-                Section(header: Text("Possible Trigger")) {
-                    NavigationLink(destination: AddTriggerView(context: self.context)) {
-                        Text("Add New Trigger Item")
-                    }
-                    
-                    
+                
+                Section(header: Text("Possible Triggers")) {
                     if triggers.isEmpty {
                         Text("Please add a trigger")
                     }
                     else {
-                        Picker("Trigger", selection: $selectedTrigger) {
-                            Text("None").tag(999)
-                            
-                            ForEach(0..<triggers.count) { index in
-                                Text(self.triggers[index].name ?? "NoName").tag(index)
-                            }
-                        }
-                        
-                        if selectedTrigger > self.triggers.count {
-                            Text("You selected: None")
-                        }
-                        else {
-                            Text("You selected: \(self.triggers[selectedTrigger].name ?? "")")
-                        }
-                        
+                        MultipleSelectionList(triggers: triggers)
                     }
                 }
                 
-                ButtonCenteredText(title: "Add Instance", handler: self.addInstance)
+                Section(header: Text("Chosen Triggers")) {
+                    HStack {
+                        ForEach(self.selectedTriggersEnv.triggers) { item in
+                            Text(item.wrappedName)
+                        }
+                    }
+                }
+                
+                Section(header: Text("Add a Trigger")) {
+                    NavigationLink(destination: AddTriggerView(context: self.context)) {
+                        Text("Add New Trigger Item")
+                    }
+
+                }
+                
+                ButtonCenteredText(title: "Done", handler: self.addInstance)
             }
         }
+        .onAppear(perform: {
+            self.clearTriggers()
+        })
+    }
+    
+    
+    func clearTriggers() {
+        selectedTriggersEnv.triggers = []
     }
     
     
@@ -95,23 +102,26 @@ struct AddInstanceView: View {
     func addInstance() {
         print("\nADD INSTANCE\n")
         
+        let instance = Instance(context: context)
+        instance.id        = UUID()
+        
         if !note.isEmpty {
-            let instance = Instance(context: context)
-            instance.id        = UUID()
-            
             instance.note     = note
-            instance.dateTime = dateTime
-            instance.severity = intensityArray[selectedIntensity]
-            
-            symptom.addToInstances(instance)
-            
-            do {
-                try context.save()
-                self.presentationMode.wrappedValue.dismiss()
-            } catch {
-                print(error.localizedDescription)
-                self.presentationMode.wrappedValue.dismiss()
-            }
+        }
+        
+        instance.dateTime = dateTime
+        instance.severity = intensityArray[selectedIntensity]
+        
+        for trigger in selectedTriggersEnv.triggers {
+            instance.addToTrigger(trigger)
+        }
+        
+        symptom.addToInstances(instance)
+        
+        do {
+            try context.save()
+        } catch {
+            print(error.localizedDescription)
         }
         
         self.presentationMode.wrappedValue.dismiss()

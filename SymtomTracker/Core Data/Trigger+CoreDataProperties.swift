@@ -25,16 +25,21 @@ extension Trigger {
 
 extension Trigger: Identifiable { }
 
+extension Trigger: Comparable {
+    public static func < (lhs: Trigger, rhs: Trigger) -> Bool {
+        lhs.getName() < rhs.getName()
+    }
+}
+
 
 extension Trigger {
     
-    func allTriggers() {
-        
+    var wrappedName: String {
+        return name ?? "UNKNOWN2"
     }
-//    var allTriggers: [Trigger] {
-//
-//        return Self.fetchRequest()
-//
-////        FetchRequestTrigger
-//    }
+    
+    func getName() -> String {
+        return name ?? "UNKNOWN"
+    }
+    
 }

@@ -12,6 +12,8 @@ import CoreData
 struct InstanceListView: View {
     let symptom: Symptom
 
+    @EnvironmentObject var selectedTriggersEnv: SelectedTriggers
+    
     var body: some View {
         VStack {
             InstanceCellHeader()

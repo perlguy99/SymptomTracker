@@ -33,16 +33,14 @@ struct InstanceDetailView: View {
                     Text(instance.wrappedNote)
                 }
 
-                Section(header: Text("Trigger")) {
+                Section(header: Text("Possible Triggers")) {
                     
                     if instance.hasTrigger {
-                        Text(instance.typedTrigger[0].name ?? "")
+                        TriggerCell(triggers: instance.typedTrigger.sorted())
                     }
                     else {
-                        Text("No Trigger Selected").font(.caption)
+                        Text("No Triggers Selected").font(.caption)
                     }
-//                    Text("Trigger Name")
-//                    Text(instance.wrappedTrigger)
                 }
             }
         }

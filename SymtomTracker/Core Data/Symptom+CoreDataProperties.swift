@@ -76,4 +76,8 @@ extension Symptom {
     var typedInstances: [Instance] {
         return (instances?.array as? [Instance]) ?? []
     }
+    
+    var instanceCount: String {
+        return "\(instances?.count ?? 0) instance(s)"
+    }
 }

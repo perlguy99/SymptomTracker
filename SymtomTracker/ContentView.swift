@@ -15,12 +15,15 @@ struct ContentView: View {
     @State private var showingAddSymptomView = false
     @State var selectedView = 0
     
+    let selectedTriggersEnv = SelectedTriggers()
+    
     var body: some View {
         
         TabView(selection: $selectedView) {
             
             NavigationView {
                 SymptomView()
+                    .environmentObject(selectedTriggersEnv)
                     .navigationBarTitle("Symptoms")
                     .navigationBarItems(trailing:
                         NavigationLink(destination: AddSymptomView(context: self.context)) {
