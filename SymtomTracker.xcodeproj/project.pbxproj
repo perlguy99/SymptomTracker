@@ -22,6 +22,8 @@
 		AF700C97241A87B800F68F07 /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF700C96241A87B800F68F07 /* MultipleSelectionRow.swift */; };
 		AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */; };
 		AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */; };
+		AF72B37D241BC7FF00511401 /* SelectTriggersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72B37C241BC7FF00511401 /* SelectTriggersView.swift */; };
+		AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72B3A0241BDAB200511401 /* SelectedItems.swift */; };
 		AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1124115B4500D69F5E /* AppDelegate.swift */; };
 		AF7DAA1424115B4500D69F5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */; };
 		AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */; };
@@ -73,6 +75,8 @@
 		AF700C96241A87B800F68F07 /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
 		AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
 		AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailView.swift; sourceTree = "<group>"; };
+		AF72B37C241BC7FF00511401 /* SelectTriggersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTriggersView.swift; sourceTree = "<group>"; };
+		AF72B3A0241BDAB200511401 /* SelectedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItems.swift; sourceTree = "<group>"; };
 		AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymtomTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7DAA1124115B4500D69F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -124,6 +128,7 @@
 			isa = PBXGroup;
 			children = (
 				AF339DCE24195D8A0060192C /* AddTriggerView.swift */,
+				AF72B37C241BC7FF00511401 /* SelectTriggersView.swift */,
 			);
 			path = Triggers;
 			sourceTree = "<group>";
@@ -133,6 +138,7 @@
 			children = (
 				AF700C94241A87AB00F68F07 /* MultipleSelectionList.swift */,
 				AF700C96241A87B800F68F07 /* MultipleSelectionRow.swift */,
+				AF72B3A0241BDAB200511401 /* SelectedItems.swift */,
 			);
 			path = "Misc Views";
 			sourceTree = "<group>";
@@ -353,12 +359,14 @@
 				AF7DAA4E241173EE00D69F5E /* InstanceListView.swift in Sources */,
 				AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
+				AF72B37D241BC7FF00511401 /* SelectTriggersView.swift in Sources */,
 				AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */,
 				AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */,
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF700C95241A87AB00F68F07 /* MultipleSelectionList.swift in Sources */,
 				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
 				AF03E48924181497007207D6 /* Trigger+CoreDataProperties_OLD.swift in Sources */,
+				AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */,
 				AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
 				AF03E48824181497007207D6 /* Trigger+CoreDataClass_OLD.swift in Sources */,

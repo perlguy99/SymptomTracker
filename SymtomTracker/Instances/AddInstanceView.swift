@@ -21,9 +21,9 @@ struct AddInstanceView: View {
     @State private var trigger: String   = ""
     @State private var selectedIntensity = 0
     
-    @State private var selectedTrigger   = 999
+//    @State private var selectedTrigger   = 999
     
-    @EnvironmentObject var selectedTriggersEnv: SelectedTriggers
+    @ObservedObject var fooBar = SelectedItems<Trigger>()
     
     var symptom: Symptom
     var intensityArray = ["Low", "Moderate", "Severe"]
@@ -55,19 +55,31 @@ struct AddInstanceView: View {
                 }
                 
                 
-                Section(header: Text("Possible Triggers")) {
-                    if triggers.isEmpty {
-                        Text("Please add a trigger")
-                    }
-                    else {
-                        MultipleSelectionList(triggers: triggers)
+//                Section(header: Text("Possible Triggers")) {
+//                    if triggers.isEmpty {
+//                        Text("Please add a trigger")
+//                    }
+//                    else {
+//                        MultipleSelectionList(triggers: triggers)
+//                    }
+//                }
+                
+                Section(header: Text("Select Triggers")) {
+//                    NavigationLink(destination: SelectTriggersView(context: self.context)) {
+                    NavigationLink(destination: SelectTriggersView(context: context, selectedTriggers: fooBar)) {
+                        Text("Select Triggers")
                     }
                 }
                 
                 Section(header: Text("Chosen Triggers")) {
                     HStack {
-                        ForEach(self.selectedTriggersEnv.triggers) { item in
+                        ForEach(self.fooBar.items) { item in
                             Text(item.wrappedName)
+                                .font(.caption)
+                                .padding([.leading, .trailing], 5)
+                                .padding([.top, .bottom], 2)
+                                .background(Color.green.opacity(0.5))
+                                .cornerRadius(.infinity)
                         }
                     }
                 }
@@ -83,14 +95,18 @@ struct AddInstanceView: View {
             }
         }
         .onAppear(perform: {
-            self.clearTriggers()
+//            self.clearTriggers()
         })
+//            .onDisappear(perform: {
+//                self.clearTriggers()
+//            })
     }
     
     
-    func clearTriggers() {
-        selectedTriggersEnv.triggers = []
-    }
+//    func clearTriggers() {
+//        fooBar.removeAllTriggers()
+////        selectedTriggersEnv.triggers = []
+//    }
     
     
     func buttonTapped() {
@@ -112,7 +128,7 @@ struct AddInstanceView: View {
         instance.dateTime = dateTime
         instance.severity = intensityArray[selectedIntensity]
         
-        for trigger in selectedTriggersEnv.triggers {
+        for trigger in fooBar.items {
             instance.addToTrigger(trigger)
         }
         

@@ -15,7 +15,7 @@ struct ContentView: View {
     @State private var showingAddSymptomView = false
     @State var selectedView = 0
     
-    let selectedTriggersEnv = SelectedTriggers()
+//    let selectedTriggersEnv = SelectedItems()
     
     var body: some View {
         
@@ -23,7 +23,6 @@ struct ContentView: View {
             
             NavigationView {
                 SymptomView()
-                    .environmentObject(selectedTriggersEnv)
                     .navigationBarTitle("Symptoms")
                     .navigationBarItems(trailing:
                         NavigationLink(destination: AddSymptomView(context: self.context)) {
