@@ -9,7 +9,7 @@
 
 import Foundation
 import CoreData
-
+import Combine
 
 extension Symptom {
 
@@ -80,4 +80,17 @@ extension Symptom {
     var instanceCount: String {
         return "\(instances?.count ?? 0) instance(s)"
     }
+}
+
+
+//extension Symptom {
+//    var fooBar: TypedInstances {
+//        
+////        return typedInstances
+//        
+//    }
+//}
+
+class TypedInstances: ObservableObject {
+    @Published var instances: [Instance] = [Instance]()
 }

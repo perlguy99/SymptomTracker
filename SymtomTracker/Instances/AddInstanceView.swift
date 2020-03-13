@@ -75,11 +75,14 @@ struct AddInstanceView: View {
                     HStack {
                         ForEach(self.fooBar.items) { item in
                             Text(item.wrappedName)
-                                .font(.caption)
-                                .padding([.leading, .trailing], 5)
-                                .padding([.top, .bottom], 2)
-                                .background(Color.green.opacity(0.5))
-                                .cornerRadius(.infinity)
+                                .modifier(TagText())
+                            
+//                            Text(item.wrappedName)
+//                                .font(.caption)
+//                                .padding([.leading, .trailing], 5)
+//                                .padding([.top, .bottom], 2)
+//                                .background(Color.green.opacity(0.5))
+//                                .cornerRadius(.infinity)
                         }
                     }
                 }
@@ -144,3 +147,15 @@ struct AddInstanceView: View {
     }
 }
 
+
+
+struct TagText: ViewModifier {
+    func body(content: Content) -> some View {
+        content
+            .font(.caption)
+            .padding([.leading, .trailing], 5)
+            .padding([.top, .bottom], 2)
+            .background(Color.blue.opacity(0.5))
+            .cornerRadius(.infinity)
+    }
+}

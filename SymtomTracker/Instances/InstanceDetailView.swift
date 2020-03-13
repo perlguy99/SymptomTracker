@@ -10,6 +10,7 @@ import SwiftUI
 
 struct InstanceDetailView: View {
     let instance: Instance
+//    @Binding var needRefresh: Bool
     
     var body: some View {
         VStack {
@@ -44,6 +45,9 @@ struct InstanceDetailView: View {
                 }
             }
         }
+        .onDisappear(perform: {
+//            self.needRefresh.toggle()
+        })
     }
 }
 

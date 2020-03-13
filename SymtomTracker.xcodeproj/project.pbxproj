@@ -15,15 +15,15 @@
 		AF03E49824181B61007207D6 /* Trigger+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49224181B61007207D6 /* Trigger+CoreDataProperties.swift */; };
 		AF03E49924181B61007207D6 /* Symptom+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */; };
 		AF03E49A24181B61007207D6 /* Symptom+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */; };
-		AF03E4A424182548007207D6 /* FilteredInstanceList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */; };
+		AF03E4A424182548007207D6 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E4A324182548007207D6 /* FilteredInstanceList.swift */; };
 		AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF339DCB24193B120060192C /* ButtonCenteredText.swift */; };
 		AF339DCF24195D8A0060192C /* AddTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF339DCE24195D8A0060192C /* AddTriggerView.swift */; };
 		AF700C95241A87AB00F68F07 /* MultipleSelectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF700C94241A87AB00F68F07 /* MultipleSelectionList.swift */; };
 		AF700C97241A87B800F68F07 /* MultipleSelectionRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF700C96241A87B800F68F07 /* MultipleSelectionRow.swift */; };
-		AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */; };
 		AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */; };
 		AF72B37D241BC7FF00511401 /* SelectTriggersView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72B37C241BC7FF00511401 /* SelectTriggersView.swift */; };
 		AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72B3A0241BDAB200511401 /* SelectedItems.swift */; };
+		AF72B3A3241BF75D00511401 /* ObservedInstances.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF72B3A2241BF75D00511401 /* ObservedInstances.swift */; };
 		AF7DAA1224115B4500D69F5E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1124115B4500D69F5E /* AppDelegate.swift */; };
 		AF7DAA1424115B4500D69F5E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */; };
 		AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */; };
@@ -68,15 +68,15 @@
 		AF03E49224181B61007207D6 /* Trigger+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList2.swift; sourceTree = "<group>"; };
+		AF03E4A324182548007207D6 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
 		AF339DCB24193B120060192C /* ButtonCenteredText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCenteredText.swift; sourceTree = "<group>"; };
 		AF339DCE24195D8A0060192C /* AddTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTriggerView.swift; sourceTree = "<group>"; };
 		AF700C94241A87AB00F68F07 /* MultipleSelectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionList.swift; sourceTree = "<group>"; };
 		AF700C96241A87B800F68F07 /* MultipleSelectionRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionRow.swift; sourceTree = "<group>"; };
-		AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
 		AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceDetailView.swift; sourceTree = "<group>"; };
 		AF72B37C241BC7FF00511401 /* SelectTriggersView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectTriggersView.swift; sourceTree = "<group>"; };
 		AF72B3A0241BDAB200511401 /* SelectedItems.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectedItems.swift; sourceTree = "<group>"; };
+		AF72B3A2241BF75D00511401 /* ObservedInstances.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ObservedInstances.swift; sourceTree = "<group>"; };
 		AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SymtomTracker.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF7DAA1124115B4500D69F5E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -139,6 +139,7 @@
 				AF700C94241A87AB00F68F07 /* MultipleSelectionList.swift */,
 				AF700C96241A87B800F68F07 /* MultipleSelectionRow.swift */,
 				AF72B3A0241BDAB200511401 /* SelectedItems.swift */,
+				AF72B3A2241BF75D00511401 /* ObservedInstances.swift */,
 			);
 			path = "Misc Views";
 			sourceTree = "<group>";
@@ -239,8 +240,7 @@
 				AF7DAA532411840A00D69F5E /* InstanceCell.swift */,
 				AF7DAA49241170F700D69F5E /* InstanceView.swift */,
 				AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */,
-				AF718FDD2412AB1600DDF850 /* FilteredInstanceList.swift */,
-				AF03E4A324182548007207D6 /* FilteredInstanceList2.swift */,
+				AF03E4A324182548007207D6 /* FilteredInstanceList.swift */,
 				AF7DAA4B241173BA00D69F5E /* EmptyInstanceView.swift */,
 			);
 			path = Instances;
@@ -360,7 +360,6 @@
 				AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
 				AF72B37D241BC7FF00511401 /* SelectTriggersView.swift in Sources */,
-				AF718FDE2412AB1600DDF850 /* FilteredInstanceList.swift in Sources */,
 				AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */,
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF700C95241A87AB00F68F07 /* MultipleSelectionList.swift in Sources */,
@@ -373,7 +372,7 @@
 				AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */,
 				AF7DAA4A241170F700D69F5E /* InstanceView.swift in Sources */,
 				AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */,
-				AF03E4A424182548007207D6 /* FilteredInstanceList2.swift in Sources */,
+				AF03E4A424182548007207D6 /* FilteredInstanceList.swift in Sources */,
 				AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */,
 				AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass_OLD.swift in Sources */,
 				AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift in Sources */,
@@ -382,6 +381,7 @@
 				AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,
 				AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */,
+				AF72B3A3241BF75D00511401 /* ObservedInstances.swift in Sources */,
 				AF700C97241A87B800F68F07 /* MultipleSelectionRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

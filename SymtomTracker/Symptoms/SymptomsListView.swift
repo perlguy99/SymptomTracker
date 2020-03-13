@@ -34,6 +34,19 @@ struct SymptomsListView: View {
         
     }
     
+    
+    func getFetchRequest(symptom: Symptom) -> FetchRequest<Symptom> {
+
+//        let fr = NSFetchRequest(entity: Symptom.entity(), sortDescriptors: [], predicate: NSPredicate(format: "id == %@", symptom.id!))
+
+        
+//        let foo = FetchRequest<NSFetchRequestResult>(entity: Symptom.entity(), sortDescriptors: [], predicate: NSPredicate(format: "id == %@", symptom.id!))
+        let bar = FetchRequest<Symptom>(entity: Symptom.entity(), sortDescriptors: [], predicate: NSPredicate(format: "id == %@", symptom.id!))
+        
+        return bar
+    }
+    
+    
     func removeItems(at offsets: IndexSet) {
         for index in offsets {
             let symptom = symptoms[index]
@@ -53,3 +66,6 @@ struct SymptomsListView_Previews: PreviewProvider {
         SymptomsListView()
     }
 }
+
+
+extension UUID: CVarArg {}

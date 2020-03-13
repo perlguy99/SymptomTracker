@@ -16,6 +16,7 @@ struct TriggerCell: View {
         HStack {
             ForEach(triggers) { trigger in
                 Text(trigger.wrappedName)
+                .modifier(TagText())
             }
         }
     }
