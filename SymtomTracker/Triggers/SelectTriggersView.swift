@@ -18,9 +18,10 @@ struct SelectTriggersView: View {
     
     var body: some View {
         VStack {
-            Text("Select Triggers")
+            Spacer()
             
-            Section(header: Text("Possible Triggers")) {
+            Section {
+                
                 if triggers.isEmpty {
                     Text("Please add a trigger")
                 }
@@ -34,22 +35,14 @@ struct SelectTriggersView: View {
             Spacer()
             
         }
-        .onAppear(perform: {
-            print("\nA")
-            self.printValues()
+    .navigationBarTitle(Text("Possible Triggers"))
+        .navigationBarItems(trailing:
+            NavigationLink(destination: AddTriggerView(context: self.context)) {
+                Text("Add")
         })
-            .onDisappear(perform: {
-                print("\nD")
-                self.printValues()
-            })
         
     }
     
-    func printValues() {
-        print("--------")
-        print(selectedTriggers.items)
-        print("-----------\n")
-    }
     
 }
 

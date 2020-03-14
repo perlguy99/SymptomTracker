@@ -3,12 +3,11 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
-		AF03E48824181497007207D6 /* Trigger+CoreDataClass_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48624181497007207D6 /* Trigger+CoreDataClass_OLD.swift */; };
-		AF03E48924181497007207D6 /* Trigger+CoreDataProperties_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48724181497007207D6 /* Trigger+CoreDataProperties_OLD.swift */; };
+		84913C05241C54FE00089327 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 84913C04241C54FE00089327 /* SwiftUICharts */; };
 		AF03E49524181B61007207D6 /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */; };
 		AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */; };
 		AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */; };
@@ -32,10 +31,6 @@
 		AF7DAA1E24115B4700D69F5E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF7DAA1D24115B4700D69F5E /* Preview Assets.xcassets */; };
 		AF7DAA2124115B4700D69F5E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF7DAA1F24115B4700D69F5E /* LaunchScreen.storyboard */; };
 		AF7DAA2C24115B4700D69F5E /* SymtomTrackerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA2B24115B4700D69F5E /* SymtomTrackerTests.swift */; };
-		AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3624115F7300D69F5E /* Instance+CoreDataClass_OLD.swift */; };
-		AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3724115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift */; };
-		AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3824115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift */; };
-		AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3924115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift */; };
 		AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA3F2411689B00D69F5E /* EmptySymptomsView.swift */; };
 		AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA41241168F500D69F5E /* SymptomsListView.swift */; };
 		AF7DAA4424116A0300D69F5E /* SymptomView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4324116A0300D69F5E /* SymptomView.swift */; };
@@ -45,7 +40,6 @@
 		AF7DAA4E241173EE00D69F5E /* InstanceListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */; };
 		AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */; };
 		AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA532411840A00D69F5E /* InstanceCell.swift */; };
-		AF8ADC8A2417F4B200D4A3FD /* ChartView-master in Resources */ = {isa = PBXBuildFile; fileRef = AF8ADC892417F4B200D4A3FD /* ChartView-master */; };
 		AFE63D91241AC9C50001C6DE /* TriggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE63D90241AC9C50001C6DE /* TriggerCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -102,7 +96,6 @@
 		AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceListView.swift; sourceTree = "<group>"; };
 		AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstanceView.swift; sourceTree = "<group>"; };
 		AF7DAA532411840A00D69F5E /* InstanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceCell.swift; sourceTree = "<group>"; };
-		AF8ADC892417F4B200D4A3FD /* ChartView-master */ = {isa = PBXFileReference; lastKnownFileType = folder; name = "ChartView-master"; path = "../ChartView-master"; sourceTree = "<group>"; };
 		AFE63D90241AC9C50001C6DE /* TriggerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -111,6 +104,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84913C05241C54FE00089327 /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -147,7 +141,6 @@
 		AF7DAA0524115B4500D69F5E = {
 			isa = PBXGroup;
 			children = (
-				AF8ADC892417F4B200D4A3FD /* ChartView-master */,
 				AF7DAA1024115B4500D69F5E /* SymtomTracker */,
 				AF7DAA2A24115B4700D69F5E /* SymtomTrackerTests */,
 				AF7DAA0F24115B4500D69F5E /* Products */,
@@ -262,6 +255,9 @@
 			dependencies = (
 			);
 			name = SymtomTracker;
+			packageProductDependencies = (
+				84913C04241C54FE00089327 /* SwiftUICharts */,
+			);
 			productName = SymtomTracker;
 			productReference = AF7DAA0E24115B4500D69F5E /* SymtomTracker.app */;
 			productType = "com.apple.product-type.application";
@@ -312,6 +308,9 @@
 				Base,
 			);
 			mainGroup = AF7DAA0524115B4500D69F5E;
+			packageReferences = (
+				84913C03241C54FE00089327 /* XCRemoteSwiftPackageReference "ChartView" */,
+			);
 			productRefGroup = AF7DAA0F24115B4500D69F5E /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -329,7 +328,6 @@
 			files = (
 				AF7DAA2124115B4700D69F5E /* LaunchScreen.storyboard in Resources */,
 				AF7DAA1E24115B4700D69F5E /* Preview Assets.xcassets in Resources */,
-				AF8ADC8A2417F4B200D4A3FD /* ChartView-master in Resources */,
 				AF7DAA1B24115B4700D69F5E /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -364,21 +362,15 @@
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF700C95241A87AB00F68F07 /* MultipleSelectionList.swift in Sources */,
 				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
-				AF03E48924181497007207D6 /* Trigger+CoreDataProperties_OLD.swift in Sources */,
 				AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */,
-				AF7DAA3B24115F7300D69F5E /* Instance+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
-				AF03E48824181497007207D6 /* Trigger+CoreDataClass_OLD.swift in Sources */,
 				AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */,
 				AF7DAA4A241170F700D69F5E /* InstanceView.swift in Sources */,
 				AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */,
 				AF03E4A424182548007207D6 /* FilteredInstanceList.swift in Sources */,
 				AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */,
-				AF7DAA3A24115F7300D69F5E /* Instance+CoreDataClass_OLD.swift in Sources */,
-				AF7DAA3C24115F7300D69F5E /* Symptom+CoreDataClass_OLD.swift in Sources */,
 				AF339DCF24195D8A0060192C /* AddTriggerView.swift in Sources */,
 				AF7DAA4824116BAA00D69F5E /* AddSymptomView.swift in Sources */,
-				AF7DAA3D24115F7300D69F5E /* Symptom+CoreDataProperties_OLD.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,
 				AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */,
 				AF72B3A3241BF75D00511401 /* ObservedInstances.swift in Sources */,
@@ -647,6 +639,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		84913C03241C54FE00089327 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView";
+			requirement = {
+				branch = master;
+				kind = branch;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		84913C04241C54FE00089327 /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84913C03241C54FE00089327 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
+/* End XCSwiftPackageProductDependency section */
 
 /* Begin XCVersionGroup section */
 		AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */ = {
