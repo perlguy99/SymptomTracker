@@ -7,83 +7,44 @@
 //
 
 import SwiftUI
+import CoreData
 
 struct FilteredInstanceList: View {
     @Environment(\.managedObjectContext) var context
-    
     var symptom: Symptom
-    
-//    @State var needRefresh: Bool = false
-    
-    @State var instances: [Instance] = [Instance]()
-    
+
+    // Note: - Needed to keep the list refreshing
+    @State var refreshing = false
+    var didSave = NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
+    // Note: - Needed to keep the list refreshing
     
     var body: some View {
-
         ForEach(symptom.typedInstances, id: \.self) { instance in
-            HStack {
+            VStack {
                 NavigationLink(destination: InstanceDetailView(instance: instance)) {
                     InstanceCell(instance: instance)
+                    Text((self.refreshing ? "" : ""))
+                }
+                // Note: - Needed to keep the list refreshing
+                .onReceive(self.didSave) { _ in
+                    self.refreshing.toggle()
                 }
             }
         }
         .onDelete(perform: removeItems)
     }
     
-//    var body: some View {
-//
-////        VStack {
-//
-//            ForEach(instances, id: \.self) { instance in
-////                NavigationLink(destination: InstanceDetailView(instance: instance, needRefresh: self.$needRefresh)) {
-//                NavigationLink(destination: InstanceDetailView(instance: instance)) {
-//                        InstanceCell(instance: instance)
-//                    }
-//            }
-//            .onDelete(perform: removeItems)
-////        }
-//
-//        .onAppear(perform: {
-//            self.loadInstances()
-//        })
-//
-//    }
 
-
-    
-    
-    func loadInstances() {
-        self.instances = self.symptom.typedInstances
-        print("\n")
-        print(self.instances)
-    }
-    
     func removeItems(at offsets: IndexSet) {
         for index in offsets {
             let foo = symptom.typedInstances[index]
-            context.delete(foo)
+            symptom.removeFromInstances(foo)
         }
         
         do {
             try context.save()
-            
-            self.loadInstances()
         } catch {
             print(error.localizedDescription)
         }
     }
 }
-
-
-
-//var body: some View {
-//
-//    ForEach(symptom.typedInstances, id: \.self) { instance in
-//        HStack {
-//            NavigationLink(destination: InstanceDetailView(instance: instance)) {
-//                InstanceCell(instance: instance)
-//            }
-//        }
-//    }
-//    .onDelete(perform: removeItems)
-//}
