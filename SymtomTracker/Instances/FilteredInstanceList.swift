@@ -17,24 +17,37 @@ struct FilteredInstanceList: View {
     
     @State var instances: [Instance] = [Instance]()
     
+    
     var body: some View {
-        
-//        VStack {
-            
-            ForEach(instances, id: \.self) { instance in
-//                NavigationLink(destination: InstanceDetailView(instance: instance, needRefresh: self.$needRefresh)) {
-                NavigationLink(destination: InstanceDetailView(instance: instance)) {
-                        InstanceCell(instance: instance)
-                    }
-            }
-            .onDelete(perform: removeItems)
-//        }
-            
-        .onAppear(perform: {
-            self.loadInstances()
-        })
 
+        ForEach(symptom.typedInstances, id: \.self) { instance in
+            HStack {
+                NavigationLink(destination: InstanceDetailView(instance: instance)) {
+                    InstanceCell(instance: instance)
+                }
+            }
+        }
+        .onDelete(perform: removeItems)
     }
+    
+//    var body: some View {
+//
+////        VStack {
+//
+//            ForEach(instances, id: \.self) { instance in
+////                NavigationLink(destination: InstanceDetailView(instance: instance, needRefresh: self.$needRefresh)) {
+//                NavigationLink(destination: InstanceDetailView(instance: instance)) {
+//                        InstanceCell(instance: instance)
+//                    }
+//            }
+//            .onDelete(perform: removeItems)
+////        }
+//
+//        .onAppear(perform: {
+//            self.loadInstances()
+//        })
+//
+//    }
 
 
     

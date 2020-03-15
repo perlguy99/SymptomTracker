@@ -96,6 +96,7 @@ struct AddInstanceView: View {
         }
         
         symptom.addToInstances(instance)
+        symptom.managedObjectContext?.refresh(symptom, mergeChanges: true)
         
         do {
             try context.save()

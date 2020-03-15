@@ -14,7 +14,7 @@ struct InstanceDetailView: View {
     
     var body: some View {
         VStack {
-            Text("Instance Foo")
+            Text("Instance Details")
 //            Text("\(instance.ofSymptom?.wrappedName ?? "") Instance")
                 .font(.largeTitle)
             
