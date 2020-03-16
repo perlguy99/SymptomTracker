@@ -10,7 +10,6 @@ import SwiftUI
 
 struct InstanceView: View {
     let symptom: Symptom
-//    @EnvironmentObject var selectedTriggersEnv: SelectedItems
     
     init(symptom: Symptom) {
         self.symptom = symptom

@@ -83,14 +83,4 @@ extension Symptom {
 }
 
 
-//extension Symptom {
-//    var fooBar: TypedInstances {
-//        
-////        return typedInstances
-//        
-//    }
-//}
-
-class TypedInstances: ObservableObject {
-    @Published var instances: [Instance] = [Instance]()
-}
+// TODO: - Make Instance sortable.

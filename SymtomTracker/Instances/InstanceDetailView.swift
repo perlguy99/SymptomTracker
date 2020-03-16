@@ -10,12 +10,10 @@ import SwiftUI
 
 struct InstanceDetailView: View {
     let instance: Instance
-//    @Binding var needRefresh: Bool
     
     var body: some View {
         VStack {
             Text("Instance Details")
-//            Text("\(instance.ofSymptom?.wrappedName ?? "") Instance")
                 .font(.largeTitle)
             
             Form {
@@ -46,14 +44,6 @@ struct InstanceDetailView: View {
             }
         }
         .onDisappear(perform: {
-//            self.needRefresh.toggle()
         })
     }
 }
-
-
-//struct InstanceDetailView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        InstanceDetailView()
-//    }
-//}

@@ -12,8 +12,6 @@ struct SymptomView: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: []) var symptoms: FetchedResults<Symptom>
     
-//    @EnvironmentObject var selectedTriggersEnv: SelectedItems
-    
     var body: some View {
         if symptoms.count > 0 {
             return AnyView(SymptomsListView())

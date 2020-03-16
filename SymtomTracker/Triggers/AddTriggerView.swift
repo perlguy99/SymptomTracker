@@ -49,14 +49,9 @@ struct AddTriggerView: View {
             
             do {
                 try context.save()
-//                self.presentationMode.wrappedValue.dismiss()
             } catch {
                 print(error.localizedDescription)
-//                self.presentationMode.wrappedValue.dismiss()
             }
-        }
-        else {
-//            self.presentationMode.wrappedValue.dismiss()
         }
     }
 }

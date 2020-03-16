@@ -13,7 +13,4 @@ import SwiftUI
 
 @objc(Trigger)
 public class Trigger: NSManagedObject {
-
-//    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
-    
 }

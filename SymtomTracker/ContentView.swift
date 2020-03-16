@@ -15,8 +15,6 @@ struct ContentView: View {
     @State private var showingAddSymptomView = false
     @State var selectedView = 0
     
-//    let selectedTriggersEnv = SelectedItems()
-    
     var body: some View {
         
         TabView(selection: $selectedView) {

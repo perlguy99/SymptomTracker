@@ -13,8 +13,6 @@ struct SymptomsListView: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var symptoms: FetchedResults<Symptom>
     
-//    @EnvironmentObject var selectedTriggersEnv: SelectedItems
-    
     var body: some View {
         List {
             Section(header: Text("Tracked Symptoms")) {
@@ -32,15 +30,6 @@ struct SymptomsListView: View {
             }
         }
         
-    }
-    
-    
-    func getFetchRequest(symptom: Symptom) -> FetchRequest<Symptom> {
-
-//        let fr = NSFetchRequest(entity: Symptom.entity(), sortDescriptors: [], predicate: NSPredicate(format: "id == %@", symptom.id!))
-//        let foo = FetchRequest<NSFetchRequestResult>(entity: Symptom.entity(), sortDescriptors: [], predicate: NSPredicate(format: "id == %@", symptom.id!))
-        let bar = FetchRequest<Symptom>(entity: Symptom.entity(), sortDescriptors: [], predicate: NSPredicate(format: "id == %@", symptom.id!))
-        return bar
     }
     
     

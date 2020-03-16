@@ -15,16 +15,12 @@ struct InstanceCell: View {
         GeometryReader { geometry in
             HStack(spacing: 0) {
                 
-//                HStack(alignment: .center) {
-                    Text(self.instance.stringDate)
-                        .font(.headline)
+                Text(self.instance.stringDate)
+                    .font(.headline)
                     .frame(width: geometry.size.width * 0.31, height: 25)
-                    Text(self.instance.stringTime)
-                        .font(.footnote)
+                Text(self.instance.stringTime)
+                    .font(.footnote)
                     .frame(width: geometry.size.width * 0.12, height: 25)
-//                }
-                
-//                Spacer()
                 
                 Text(self.instance.wrappedSeverity)
                     .font(.caption)
@@ -38,8 +34,7 @@ struct InstanceCell: View {
                     self.instance.triggerImage.foregroundColor(.clear).frame(width: geometry.size.width * 0.21, height: 25)
             }
             
-                Spacer()
-//            .padding([.leading, .trailing])
+            Spacer()
         }
     }
     
@@ -77,38 +72,4 @@ struct InstanceCellHeader: View {
         }
         .frame(maxHeight: 25)
     }
-    
 }
-
-
-//struct InstanceCell: View {
-//    var instance: Instance
-//
-//    var body: some View {
-//        GeometryReader { geometry in
-//            HStack(alignment: .center) {
-//
-//                HStack(alignment: .center) {
-//                    Text(self.instance.stringDate)
-//                        .font(.headline)
-//                    Text(self.instance.stringTime)
-//                        .font(.footnote)
-//                }
-//
-//                Spacer()
-//
-//                Text(self.instance.wrappedSeverity)
-//                    .font(.caption)
-//                    .frame(alignment: .leading)
-//                    .background(Color.green)
-//
-//                Spacer()
-//                self.instance.hasNote ? self.instance.noteImage.foregroundColor(.gray) : self.instance.noteImage.foregroundColor(.clear)
-//                Spacer()
-//                self.instance.hasTrigger ? self.instance.triggerImage.foregroundColor(.gray) : self.instance.triggerImage.foregroundColor(.clear)
-//            }
-//            .padding([.leading, .trailing])
-//        }
-//    }
-//
-//}
