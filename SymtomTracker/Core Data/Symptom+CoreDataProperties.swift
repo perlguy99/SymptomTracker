@@ -72,9 +72,14 @@ extension Symptom {
 extension Symptom: Identifiable { }
 
 
+// Basically a View Model for the Instances of a Symptom
 extension Symptom {
     var typedInstances: [Instance] {
-        return (instances?.array as? [Instance]) ?? []
+        guard let instances     = instances else { return [] }
+        guard let instanceArray = instances.array as? [Instance] else { return [] }
+        
+        // Newest First
+        return instanceArray.sorted { $0.dateTime! > $1.dateTime! }
     }
     
     var instanceCount: String {
@@ -83,4 +88,10 @@ extension Symptom {
 }
 
 
-// TODO: - Make Instance sortable.
+// TODO: - Make a View Model for statistics
+// ** Instances ordered by date, different color for each severity
+// ** Instances ordered by date, all lumped together
+// ** Instances ordered by date, by triggers
+// ** Instances ordered by date, by triggers & severity
+
+

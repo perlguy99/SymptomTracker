@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8428221524211F36006F30BF /* ChartView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428221424211F36006F30BF /* ChartView1.swift */; };
+		84282229242140C4006F30BF /* InstanceCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84282228242140C3006F30BF /* InstanceCellHeader.swift */; };
 		84913C05241C54FE00089327 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 84913C04241C54FE00089327 /* SwiftUICharts */; };
 		AF03E49524181B61007207D6 /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */; };
 		AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */; };
@@ -54,6 +56,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8428221424211F36006F30BF /* ChartView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView1.swift; sourceTree = "<group>"; };
+		84282228242140C3006F30BF /* InstanceCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceCellHeader.swift; sourceTree = "<group>"; };
 		AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -112,6 +116,25 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		842822182421200D006F30BF /* Statistics */ = {
+			isa = PBXGroup;
+			children = (
+				8428221424211F36006F30BF /* ChartView1.swift */,
+			);
+			path = Statistics;
+			sourceTree = "<group>";
+		};
+		8428222A24216790006F30BF /* List View */ = {
+			isa = PBXGroup;
+			children = (
+				AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */,
+				AF7DAA532411840A00D69F5E /* InstanceCell.swift */,
+				84282228242140C3006F30BF /* InstanceCellHeader.swift */,
+				AF03E4A324182548007207D6 /* FilteredInstanceList.swift */,
+			);
+			path = "List View";
+			sourceTree = "<group>";
+		};
 		AF339DCD24195D780060192C /* Triggers */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,6 +176,7 @@
 		AF7DAA1024115B4500D69F5E /* SymtomTracker */ = {
 			isa = PBXGroup;
 			children = (
+				842822182421200D006F30BF /* Statistics */,
 				AF700C93241A878100F68F07 /* Misc Views */,
 				AF7DAA3E24115F7D00D69F5E /* Core Data */,
 				AF7DAA1124115B4500D69F5E /* AppDelegate.swift */,
@@ -218,11 +242,9 @@
 				AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */,
 				AF718FE82416CBA900DDF850 /* InstanceDetailView.swift */,
 				AFE63D90241AC9C50001C6DE /* TriggerCell.swift */,
-				AF7DAA532411840A00D69F5E /* InstanceCell.swift */,
 				AF7DAA49241170F700D69F5E /* InstanceView.swift */,
-				AF7DAA4D241173EE00D69F5E /* InstanceListView.swift */,
-				AF03E4A324182548007207D6 /* FilteredInstanceList.swift */,
 				AF7DAA4B241173BA00D69F5E /* EmptyInstanceView.swift */,
+				8428222A24216790006F30BF /* List View */,
 			);
 			path = Instances;
 			sourceTree = "<group>";
@@ -241,6 +263,7 @@
 			buildRules = (
 			);
 			dependencies = (
+				8428221724211F85006F30BF /* PBXTargetDependency */,
 			);
 			name = SymtomTracker;
 			packageProductDependencies = (
@@ -343,6 +366,7 @@
 				AF03E49824181B61007207D6 /* Trigger+CoreDataProperties.swift in Sources */,
 				AF7DAA4424116A0300D69F5E /* SymptomView.swift in Sources */,
 				AF7DAA4E241173EE00D69F5E /* InstanceListView.swift in Sources */,
+				8428221524211F36006F30BF /* ChartView1.swift in Sources */,
 				AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */,
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
 				AF72B37D241BC7FF00511401 /* SelectTriggersView.swift in Sources */,
@@ -350,6 +374,7 @@
 				AF7DAA402411689B00D69F5E /* EmptySymptomsView.swift in Sources */,
 				AF700C95241A87AB00F68F07 /* MultipleSelectionList.swift in Sources */,
 				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
+				84282229242140C4006F30BF /* InstanceCellHeader.swift in Sources */,
 				AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
 				AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */,
@@ -377,6 +402,10 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		8428221724211F85006F30BF /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			productRef = 8428221624211F85006F30BF /* SwiftUICharts */;
+		};
 		AF7DAA2924115B4700D69F5E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = AF7DAA0D24115B4500D69F5E /* SymtomTracker */;
@@ -640,6 +669,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		8428221624211F85006F30BF /* SwiftUICharts */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 84913C03241C54FE00089327 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
+		};
 		84913C04241C54FE00089327 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 84913C03241C54FE00089327 /* XCRemoteSwiftPackageReference "ChartView" */;

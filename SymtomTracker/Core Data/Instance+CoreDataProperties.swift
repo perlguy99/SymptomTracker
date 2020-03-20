@@ -149,3 +149,23 @@ extension Instance {
         return (trigger?.array as? [Trigger]) ?? []
     }
 }
+
+
+extension Instance: Comparable {
+    public static func < (lhs: Instance, rhs: Instance) -> Bool {
+        if lhs.dateTime! < rhs.dateTime! {
+            return true
+        }
+        
+        return false
+   }
+    
+     public static func > (lhs: Instance, rhs: Instance) -> Bool {
+         if lhs.dateTime! > rhs.dateTime! {
+             return true
+         }
+         
+         return false
+    }
+    
+}

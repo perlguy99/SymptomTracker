@@ -39,8 +39,7 @@ struct ContentView: View {
                     }
             }.tag(0)
             
-            
-            Text("SecondView")
+            ChartView1()
                 .tabItem {
                     Image(systemName: "waveform.path.ecg")
                     Text("Statistics")
