@@ -35,6 +35,7 @@ struct InstanceCellHeader: View {
                 
                 Text("Triggers")
                     .frame(width: (geometry.size.width - 45) * 0.21, height: 25)
+                
                 Text("")
                     .frame(width: 30, height: 25)
             }

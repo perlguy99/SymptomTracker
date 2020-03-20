@@ -20,7 +20,6 @@ extension Symptom {
     @NSManaged public var id: UUID?
     @NSManaged public var name: String?
     @NSManaged public var instances: NSOrderedSet?
-
 }
 
 // MARK: Generated accessors for instances
