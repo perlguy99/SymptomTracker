@@ -26,6 +26,17 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         // Add `@Environment(\.managedObjectContext)` in the views that will need the context.
         let contentView = ContentView().environment(\.managedObjectContext, context)
 
+        do {
+            let foo = try Path.documents()
+            print("\n")
+            print("-----")
+            print(foo.absoluteString)
+            print("-----")
+            print("\n")
+        } catch let error {
+            print(error.localizedDescription)
+        }
+        
         // Use a UIHostingController as window root view controller.
         if let windowScene = scene as? UIWindowScene {
             let window = UIWindow(windowScene: windowScene)
