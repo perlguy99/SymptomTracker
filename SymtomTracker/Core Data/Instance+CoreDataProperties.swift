@@ -62,9 +62,7 @@ extension Instance {
 }
 
 
-// Total Instances for symptom
 
-// Instances for symptom in last 1 days
 
 //// Get the current calendar with local time zone
 //var calendar = Calendar.current
@@ -111,6 +109,12 @@ extension Instance {
 //}
 
 
+
+
+// Total Instances for symptom
+
+// Instances for symptom in last 1 day
+
 // Instances for symptom in last 7 days
 
 // Instances for symptom in last 30 days
@@ -121,7 +125,7 @@ extension Instance {
 
 // Total Severe Instances for symptom
 
-// Total Severe Instances for symptom in last 1 days
+// Total Severe Instances for symptom in last 1 day
 
 // Total Severe Instances for symptom in last 7 days
 
@@ -133,7 +137,7 @@ extension Instance {
 
 // Total Moderate Instances for symptom
 
-// Total Moderate Instances for symptom in last 1 days
+// Total Moderate Instances for symptom in last 1 day
 
 // Total Moderate Instances for symptom in last 7 days
 
@@ -145,7 +149,7 @@ extension Instance {
 
 // Total Low Instances for symptom
 
-// Total Low Instances for symptom in last 1 days
+// Total Low Instances for symptom in last 1 day
 
 // Total Low Instances for symptom in last 7 days
 
@@ -157,7 +161,7 @@ extension Instance {
 
 // Total Instances for symptom with X trigger
 
-// Total Instances for symptom with X trigger in last 1 days
+// Total Instances for symptom with X trigger in last 1 day
 
 // Total Instances for symptom with X trigger in last 7 days
 
@@ -169,7 +173,7 @@ extension Instance {
 
 // Total Severe Instances for symptom with X trigger
 
-// Total Severe Instances for symptom with X trigger in last 1 days
+// Total Severe Instances for symptom with X trigger in last 1 day
 
 // Total Severe Instances for symptom with X trigger in last 7 days
 
@@ -181,7 +185,7 @@ extension Instance {
 
 // Total Moderate Instances for symptom with X trigger
 
-// Total Moderate Instances for symptom with X trigger in last 1 days
+// Total Moderate Instances for symptom with X trigger in last 1 day
 
 // Total Moderate Instances for symptom with X trigger in last 7 days
 
@@ -193,7 +197,7 @@ extension Instance {
 
 // Total Low Instances for symptom with X trigger
 
-// Total Low Instances for symptom with X trigger in last 1 days
+// Total Low Instances for symptom with X trigger in last 1 day
 
 // Total Low Instances for symptom with X trigger in last 7 days
 
@@ -204,7 +208,46 @@ extension Instance {
 
 
 
-
+extension Instance {
+    
+    
+//    @nonobjc public class func fetchRequest() -> NSFetchRequest<Instance> {
+//        return NSFetchRequest<Instance>(entityName: "Instance")
+//    }
+    
+    
+    
+    
+    // NOTE: NEED TO ADD A WAY TO FILTER BY SYMTOM
+    
+     func fetchRequestAllInstancesLast7Days(currentSymptom: Symptom) -> NSFetchRequest<Instance> {
+        let currentId   = currentSymptom.id!
+        let mySymptomId = self.symptoms!.id!
+        
+        let symptomPredicate = NSPredicate(format: "%@ == %@", currentId.uuidString, mySymptomId.uuidString)
+        
+        var calendar = Calendar.current
+        calendar.timeZone = NSTimeZone.local
+        
+        let dateToday = calendar.startOfDay(for: Date())  // Today
+        let dateFrom  = calendar.date(byAdding: .day, value: -7, to: dateToday)
+//        let dateTo    = dateToday
+        
+        let fromPredicate = NSPredicate(format: "%@ >= %@", dateTime! as NSDate, dateFrom! as NSDate)
+//        let toPredicate   = NSPredicate(format: "%@ < %@", dateTime! as NSDate, dateTo as NSDate)
+        
+//        let fr = FetchRequest<NSFetchRequestResult>(entity: Instance.entity(), sortDescriptors: [])
+        
+        let fr2 = NSFetchRequest<Instance>(entityName: "Instance")
+//        fr2.predicate = fromPredicate
+        
+        let compound = NSCompoundPredicate(andPredicateWithSubpredicates: [symptomPredicate, fromPredicate])
+        fr2.predicate = compound
+        
+        return fr2
+    }
+    
+}
 
 
 

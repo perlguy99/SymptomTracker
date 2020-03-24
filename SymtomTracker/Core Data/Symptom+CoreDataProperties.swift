@@ -73,6 +73,27 @@ extension Symptom: Identifiable { }
 
 // Basically a View Model for the Instances of a Symptom
 extension Symptom {
+    
+    // TODO: Convert this to a function that you can pass in the amount of days to
+    var filteredTypedInstances: [Instance] {
+        var calendar = Calendar.current
+        calendar.timeZone = NSTimeZone.local
+        
+        let dateToday = calendar.startOfDay(for: Date())  // Today
+        let dateFrom  = calendar.date(byAdding: .day, value: -10, to: dateToday)  // last 10 days
+
+        let fromPredicate = NSPredicate(format: "dateTime >= %@", dateFrom! as NSDate)
+        
+        guard let instances     = instances else { return [] }
+        guard let instanceArray = instances.array as? [Instance] else { return [] }
+        
+        let nsInstances = instanceArray as NSArray
+        guard let filtered = nsInstances.filtered(using: fromPredicate) as? [Instance] else { return [] }
+        
+        return filtered.sorted { $0.dateTime! > $1.dateTime! }
+    }
+
+    
     var typedInstances: [Instance] {
         guard let instances     = instances else { return [] }
         guard let instanceArray = instances.array as? [Instance] else { return [] }
@@ -84,6 +105,9 @@ extension Symptom {
     var instanceCount: String {
         return "\(instances?.count ?? 0) instance(s)"
     }
+    
+    
+    
 }
 
 
