@@ -7,18 +7,41 @@
 //
 
 import SwiftUI
+import Combine
+
+class SortArrow: ObservableObject {
+    static let shared = SortArrow()
+    
+    @Published var ascending = false
+    
+    var symbol: String {
+        get {
+            if ascending {
+                return "↓"
+            }
+            else {
+                return "↑"
+            }
+        }
+    }
+    
+    private init() { }
+}
+
 
 struct InstanceCellHeader: View {
     
     // TODO: - Make the sorting actually work when tapped
-    @State private var ascending = false
-    @State private var symbol    = "↑"
+//    @State private var ascending = false
+//    @State private var symbol    = "↑"
+    
+    @ObservedObject var sortArrow = SortArrow.shared
     
     var body: some View {
         
         GeometryReader { geometry in
             HStack(spacing: 0) {
-                Text("\(self.symbol) Date")
+                Text("\(self.sortArrow.symbol) Date")
                     .frame(width: ((geometry.size.width - 45) * 0.31 + 15), height: 25)
                     .onTapGesture {
                         self.changeSort()
@@ -50,13 +73,21 @@ struct InstanceCellHeader: View {
     
     
     func changeSort() {
-        ascending.toggle()
-        if ascending == false {
-            symbol = "↑"
-        }
-        else {
-            symbol = "↓"
-        }
+        sortArrow.ascending.toggle()
+        
+        print("\n")
+        print(String(repeating: "-", count: 40))
+        print(sortArrow.ascending.description)
+        print(String(repeating: "-", count: 40))
+        print("\n")
+        
+//        ascending.toggle()
+//        if ascending == false {
+//            symbol = "↑"
+//        }
+//        else {
+//            symbol = "↓"
+//        }
     }
     
 }

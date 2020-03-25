@@ -29,7 +29,7 @@ struct AddInstanceView: View {
     var body: some View {
         
         VStack {
-            Text("Add New Instance").font(.largeTitle)
+            Text("New \(symptom.wrappedName) Instance").font(.largeTitle)
             
             Form {
                 Section(header: Text("Date of Instance")) {

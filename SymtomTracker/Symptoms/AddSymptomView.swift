@@ -24,7 +24,7 @@ struct AddSymptomView: View {
                 }
                 
                 Section {
-                    ButtonCenteredText(title: "Dismiss", handler: self.buttonTapped)
+                    ButtonCenteredText(title: "Done", handler: self.buttonTapped)
                 }
             }
         }

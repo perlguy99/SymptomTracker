@@ -9,69 +9,23 @@
 import SwiftUI
 import CoreData
 
+
 struct FilteredInstanceList: View {
     @Environment(\.managedObjectContext) var context
     var symptom: Symptom
 
-    @State var ascending = false
+    @ObservedObject var sortArrow = SortArrow.shared
     
     // Note: - Needed to keep the list refreshing
     @State var refreshing = false
     var didSave = NotificationCenter.default.publisher(for: .NSManagedObjectContextDidSave)
     // Note: - Needed to keep the list refreshing
-    
-    
-//    func instanceViewRow(_ instance: Instance) -> some View {
-//        return VStack {
-//            NavigationLink(destination: InstanceDetailView(instance: instance)) {
-//                InstanceCell(instance: instance)
-//                Text((self.refreshing ? "" : ""))
-//            }
-//                // Note: - Needed to keep the list refreshing
-//                .onReceive(self.didSave) { _ in
-//                    self.refreshing.toggle()
-//            }
-//        }
-//    }
+
     
     var body: some View {
-        
-//        func instanceViewRow(_ instance: Instance) -> some View {
-//
-//            return VStack {
-//                NavigationLink(destination: InstanceDetailView(instance: instance)) {
-//                    InstanceCell(instance: instance)
-//                    Text((self.refreshing ? "" : ""))
-//                }
-//                    // Note: - Needed to keep the list refreshing
-//                    .onReceive(self.didSave) { _ in
-//                        self.refreshing.toggle()
-//                }
-//            }
-//        }
-        
-        
-        if ascending == true {
+        // NEWEST FIRST
+        if self.sortArrow.ascending == true {
             
-            return ForEach(symptom.typedInstances.sorted(by: >), id: \.self) { instance in
-                
-                VStack {
-                    NavigationLink(destination: InstanceDetailView(instance: instance)) {
-                        InstanceCell(instance: instance)
-                        Text((self.refreshing ? "" : ""))
-                    }
-                    // Note: - Needed to keep the list refreshing
-                    .onReceive(self.didSave) { _ in
-                        self.refreshing.toggle()
-                    }
-                }
-                
-            }
-            .onDelete(perform: removeItems)
-            .onAppear(perform: printItemsForDebugging)
-        }
-        
-        else {
             return ForEach(symptom.typedInstances.sorted(by: <), id: \.self) { instance in
                 
                 VStack {
@@ -87,7 +41,26 @@ struct FilteredInstanceList: View {
                 
             }
             .onDelete(perform: removeItems)
-            .onAppear(perform: printItemsForDebugging)
+//            .onAppear(perform: printItemsForDebugging)
+        }
+        
+        else {
+            return ForEach(symptom.typedInstances.sorted(by: >), id: \.self) { instance in
+                
+                VStack {
+                    NavigationLink(destination: InstanceDetailView(instance: instance)) {
+                        InstanceCell(instance: instance)
+                        Text((self.refreshing ? "" : ""))
+                    }
+                    // Note: - Needed to keep the list refreshing
+                    .onReceive(self.didSave) { _ in
+                        self.refreshing.toggle()
+                    }
+                }
+                
+            }
+            .onDelete(perform: removeItems)
+//            .onAppear(perform: printItemsForDebugging)
         }
             
             
@@ -97,15 +70,22 @@ struct FilteredInstanceList: View {
     
     func printItemsForDebugging() {
         
+        print("\n")
+        print(String(repeating: "*", count: 40))
+        print(sortArrow.ascending.description)
+        print(String(repeating: "*", count: 40))
+        print("\n")
+
+        
 //        let days3  = symptom.instancesForPast(days: 3)
 //        let days7  = symptom.instancesForPast(days: 7)
 //        let days10 = symptom.instancesForPast(days: 10)
 //        let days14 = symptom.instancesForPast(days: 14)
-        let days30 = symptom.instancesForPast(days: 30)
-        
-        let days30l = symptom.instancesForPast(days: 30, withSeverity: "Low")
-        let days30m = symptom.instancesForPast(days: 30, withSeverity: "Moderate")
-        let days30s = symptom.instancesForPast(days: 30, withSeverity: "Severe")
+//        let days30 = symptom.instancesForPast(days: 30)
+//
+//        let days30l = symptom.instancesForPast(days: 30, withSeverity: "Low")
+//        let days30m = symptom.instancesForPast(days: 30, withSeverity: "Moderate")
+//        let days30s = symptom.instancesForPast(days: 30, withSeverity: "Severe")
         
 //        print("\n3:\n")
 //        print(String(repeating: "-", count: 40))
@@ -143,21 +123,21 @@ struct FilteredInstanceList: View {
 //        print(String(repeating: "-", count: 40))
 //        print("\n")
 
-        print("\n30:\n")
-        print(String(repeating: "-", count: 40))
-        for item in days30 {
-            print(item.stringDateTime, item.wrappedSeverity)
-        }
-        
-        print(String(repeating: "-", count: 40))
-        
-        print("All Count: \(days30.count)")
-        print("Low Count: \(days30l.count)")
-        print("Moderate Count: \(days30m.count)")
-        print("Severe Count: \(days30s.count)")
-
-        print(String(repeating: "-", count: 40))
-        print("\n")
+//        print("\n30:\n")
+//        print(String(repeating: "-", count: 40))
+//        for item in days30 {
+//            print(item.stringDateTime, item.wrappedSeverity)
+//        }
+//
+//        print(String(repeating: "-", count: 40))
+//
+//        print("All Count: \(days30.count)")
+//        print("Low Count: \(days30l.count)")
+//        print("Moderate Count: \(days30m.count)")
+//        print("Severe Count: \(days30s.count)")
+//
+//        print(String(repeating: "-", count: 40))
+//        print("\n")
 
         
         
