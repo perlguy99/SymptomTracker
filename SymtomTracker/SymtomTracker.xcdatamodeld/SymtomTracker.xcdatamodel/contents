@@ -4,7 +4,11 @@
         <attribute name="dateTime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="id" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
         <attribute name="note" optional="YES" attributeType="String"/>
-        <attribute name="severity" optional="YES" attributeType="String"/>
+        <attribute name="severity" optional="YES" attributeType="Integer 16" defaultValueString="1" usesScalarValueType="YES">
+            <userInfo>
+                <entry key="attributeValueScalarType" value="Severity"/>
+            </userInfo>
+        </attribute>
         <relationship name="symptoms" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Symptom" inverseName="instances" inverseEntity="Symptom"/>
         <relationship name="trigger" optional="YES" toMany="YES" deletionRule="Nullify" ordered="YES" destinationEntity="Trigger" inverseName="instance" inverseEntity="Trigger"/>
     </entity>

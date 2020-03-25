@@ -24,7 +24,7 @@ struct AddInstanceView: View {
     @ObservedObject var selectedTriggers = SelectedItems<Trigger>()
     
     var symptom: Symptom
-    var intensityArray = ["Low", "Moderate", "Severe"]
+    var intensityArray = Severity.allCases.map { severityString(forSeverity: $0) }
     
     var body: some View {
         
@@ -89,7 +89,7 @@ struct AddInstanceView: View {
         }
         
         instance.dateTime = dateTime
-        instance.severity = intensityArray[selectedIntensity]
+        instance.severity = Int16(selectedIntensity)
         
         for trigger in selectedTriggers.items {
             instance.addToTrigger(trigger)

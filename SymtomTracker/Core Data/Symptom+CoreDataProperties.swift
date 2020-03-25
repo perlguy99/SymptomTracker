@@ -75,22 +75,52 @@ extension Symptom: Identifiable { }
 extension Symptom {
     
     // TODO: Convert this to a function that you can pass in the amount of days to
-    var filteredTypedInstances: [Instance] {
+//    var filteredTypedInstances: [Instance] {
+//        var calendar = Calendar.current
+//        calendar.timeZone = NSTimeZone.local
+//
+//        let dateToday = calendar.startOfDay(for: Date())  // Today
+//        let dateFrom  = calendar.date(byAdding: .day, value: -10, to: dateToday)  // last 10 days
+//
+//        let fromPredicate = NSPredicate(format: "dateTime >= %@", dateFrom! as NSDate)
+//
+//        guard let instances     = instances else { return [] }
+//        guard let instanceArray = instances.array as? [Instance] else { return [] }
+//
+//        let nsInstances = instanceArray as NSArray
+//        guard let filtered = nsInstances.filtered(using: fromPredicate) as? [Instance] else { return [] }
+//
+//        return filtered.sorted { $0.dateTime! > $1.dateTime! }
+//    }
+    
+    
+    func instancesForPast(days: Int, withSeverity severity: String = "ALL") -> [Instance] {
         var calendar = Calendar.current
         calendar.timeZone = NSTimeZone.local
         
-        let dateToday = calendar.startOfDay(for: Date())  // Today
-        let dateFrom  = calendar.date(byAdding: .day, value: -10, to: dateToday)  // last 10 days
-
+        let dateToday     = calendar.startOfDay(for: Date())
+        let dateFrom      = calendar.date(byAdding: .day, value: -days, to: dateToday)
         let fromPredicate = NSPredicate(format: "dateTime >= %@", dateFrom! as NSDate)
+        
+        // To store our filtered results
+        var filtered = [Instance]()
         
         guard let instances     = instances else { return [] }
         guard let instanceArray = instances.array as? [Instance] else { return [] }
         
         let nsInstances = instanceArray as NSArray
-        guard let filtered = nsInstances.filtered(using: fromPredicate) as? [Instance] else { return [] }
         
-        return filtered.sorted { $0.dateTime! > $1.dateTime! }
+        if severity == "ALL" {
+            filtered = nsInstances.filtered(using: fromPredicate) as! [Instance]
+        }
+        else {
+            let severityPredicate = NSPredicate(format: "severity == %@", severity)
+            let combinedPredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, severityPredicate])
+            
+            filtered = nsInstances.filtered(using: combinedPredicate) as! [Instance]
+        }
+        
+        return filtered
     }
 
     

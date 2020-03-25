@@ -2,7 +2,7 @@
 //  Instance+CoreDataProperties.swift
 //  SymtomTracker
 //
-//  Created by Michalski (US), James B on 3/10/20.
+//  Created by Michalski (US), James B on 3/25/20.
 //  Copyright © 2020 Perlguy, Inc. All rights reserved.
 //
 //
@@ -20,7 +20,8 @@ extension Instance {
     @NSManaged public var dateTime: Date?
     @NSManaged public var id: UUID?
     @NSManaged public var note: String?
-    @NSManaged public var severity: String?
+//    @NSManaged public var severity: String?
+    @NSManaged public var severity: Int16
     @NSManaged public var symptoms: Symptom?
     @NSManaged public var trigger: NSOrderedSet?
 
@@ -60,55 +61,6 @@ extension Instance {
     @NSManaged public func removeFromTrigger(_ values: NSOrderedSet)
 
 }
-
-
-
-
-//// Get the current calendar with local time zone
-//var calendar = Calendar.current
-//calendar.timeZone = NSTimeZone.local
-//
-//// Get today's beginning & end
-//let dateFrom = calendar.startOfDay(for: Date()) // eg. 2016-10-10 00:00:00
-//let dateTo = calendar.date(byAdding: .day, value: 1, to: dateFrom)
-//// Note: Times are printed in UTC. Depending on where you live it won't print 00:00:00 but it will work with UTC times which can be converted to local time
-//
-//// Set predicate as date being today's date
-//let fromPredicate = NSPredicate(format: "%@ >= %@", date as NSDate, dateFrom as NSDate)
-//let toPredicate = NSPredicate(format: "%@ < %@", date as NSDate, dateTo as NSDate)
-//let datePredicate = NSCompoundPredicate(andPredicateWithSubpredicates: [fromPredicate, toPredicate])
-//fetchRequest.predicate = datePredicate
-
-
-// https://www.hackingwithswift.com/read/38/7/examples-of-using-nspredicate-to-filter-nsfetchrequest
-
-// https://www.hackingwithswift.com/quick-start/swiftui/how-to-filter-core-data-fetch-requests-using-a-predicate
-
-
-
-//+ (NSArray*)allEntriesInContext:(NSManagedObjectContext*)context fromDate:(NSDate*)fromDate toDate:(NSDate*)toDate{
-//
-//    // Create the request
-//    NSFetchRequest *request = [[NSFetchRequest alloc]initWithEntityName:@"Entry"];
-//    // Build the predicate
-//    NSPredicate *predicate = [NSPredicate predicateWithFormat: @"date >= %@ && date <= %@ ", fromDate, toDate];
-//    request.predicate = predicate;
-//    // Define sorting
-//    NSSortDescriptor *sortDesc = [NSSortDescriptor sortDescriptorWithKey:@"date" ascending:YES];
-//    request.sortDescriptors = @[sortDesc];
-//
-//    // Execute the request
-//    NSError *error;
-//    NSArray *entries = [context executeFetchRequest:request error:&error];
-//
-//    if(error){
-//        //!!!b Error management
-//    }
-//
-//    return entries;
-//}
-
-
 
 
 // Total Instances for symptom
@@ -266,7 +218,8 @@ extension Instance {
     }
     
     public var wrappedSeverity: String {
-        severity ?? ""
+        severityString(forSeverity: Severity(rawValue: UInt16(severity)) ?? Severity(rawValue: 0)! )
+//        severity ?? ""
     }
 
     public var wrappedNote: String {
@@ -359,3 +312,5 @@ extension Instance: Comparable {
     }
     
 }
+
+
