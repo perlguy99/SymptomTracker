@@ -27,7 +27,7 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         let contentView = ContentView().environment(\.managedObjectContext, context)
 
         do {
-            let foo = try Path.documents()
+            let foo = try DocumentPath.documents()
             print("\n")
             print("-----")
             print(foo.absoluteString)

@@ -38,7 +38,7 @@ enum PathError: Error, LocalizedError {
   }
 }
 
-class Path {
+class DocumentPath {
   static func inLibary(_ name: String) throws -> URL {
     return try FileManager.default
       .url(for: .libraryDirectory, in: .userDomainMask, appropriateFor: nil, create: false)

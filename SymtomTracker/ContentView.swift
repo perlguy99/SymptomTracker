@@ -39,7 +39,8 @@ struct ContentView: View {
                     }
             }.tag(0)
             
-            ChartView1(predicate: "Cough")
+              StatisticsChoiceView()
+//            ChartView1(predicate: "Cough")
                 .tabItem {
                     Image(systemName: "waveform.path.ecg")
                     Text("Statistics")

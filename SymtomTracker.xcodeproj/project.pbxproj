@@ -17,6 +17,13 @@
 		AF03E49924181B61007207D6 /* Symptom+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */; };
 		AF03E49A24181B61007207D6 /* Symptom+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */; };
 		AF03E4A424182548007207D6 /* FilteredInstanceList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E4A324182548007207D6 /* FilteredInstanceList.swift */; };
+		AF2524FC242CFD9000C0DF57 /* IfLetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2524F9242CFD8F00C0DF57 /* IfLetView.swift */; };
+		AF2524FD242CFD9000C0DF57 /* SunburstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2524FA242CFD8F00C0DF57 /* SunburstView.swift */; };
+		AF2524FE242CFD9000C0DF57 /* ArcView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2524FB242CFD8F00C0DF57 /* ArcView.swift */; };
+		AF252501242CFDA700C0DF57 /* DataModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF2524FF242CFDA700C0DF57 /* DataModel.swift */; };
+		AF252502242CFDA700C0DF57 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF252500242CFDA700C0DF57 /* ViewModel.swift */; };
+		AF252504242D2E3B00C0DF57 /* StatisticsChoiceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF252503242D2E3B00C0DF57 /* StatisticsChoiceView.swift */; };
+		AF252506242D377200C0DF57 /* SelectStatisticsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF252505242D377200C0DF57 /* SelectStatisticsView.swift */; };
 		AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF339DCB24193B120060192C /* ButtonCenteredText.swift */; };
 		AF339DCF24195D8A0060192C /* AddTriggerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF339DCE24195D8A0060192C /* AddTriggerView.swift */; };
 		AF700C95241A87AB00F68F07 /* MultipleSelectionList.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF700C94241A87AB00F68F07 /* MultipleSelectionList.swift */; };
@@ -67,6 +74,13 @@
 		AF03E49324181B61007207D6 /* Symptom+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF03E49424181B61007207D6 /* Symptom+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Symptom+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF03E4A324182548007207D6 /* FilteredInstanceList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FilteredInstanceList.swift; sourceTree = "<group>"; };
+		AF2524F9242CFD8F00C0DF57 /* IfLetView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = IfLetView.swift; sourceTree = "<group>"; };
+		AF2524FA242CFD8F00C0DF57 /* SunburstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SunburstView.swift; sourceTree = "<group>"; };
+		AF2524FB242CFD8F00C0DF57 /* ArcView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArcView.swift; sourceTree = "<group>"; };
+		AF2524FF242CFDA700C0DF57 /* DataModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataModel.swift; sourceTree = "<group>"; };
+		AF252500242CFDA700C0DF57 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		AF252503242D2E3B00C0DF57 /* StatisticsChoiceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatisticsChoiceView.swift; sourceTree = "<group>"; };
+		AF252505242D377200C0DF57 /* SelectStatisticsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SelectStatisticsView.swift; sourceTree = "<group>"; };
 		AF339DCB24193B120060192C /* ButtonCenteredText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonCenteredText.swift; sourceTree = "<group>"; };
 		AF339DCE24195D8A0060192C /* AddTriggerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddTriggerView.swift; sourceTree = "<group>"; };
 		AF700C94241A87AB00F68F07 /* MultipleSelectionList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleSelectionList.swift; sourceTree = "<group>"; };
@@ -123,7 +137,10 @@
 		842822182421200D006F30BF /* Statistics */ = {
 			isa = PBXGroup;
 			children = (
+				AF2524F6242CFD4300C0DF57 /* SunburstDiagram */,
 				8428221424211F36006F30BF /* ChartView1.swift */,
+				AF252503242D2E3B00C0DF57 /* StatisticsChoiceView.swift */,
+				AF252505242D377200C0DF57 /* SelectStatisticsView.swift */,
 			);
 			path = Statistics;
 			sourceTree = "<group>";
@@ -137,6 +154,34 @@
 				AF03E4A324182548007207D6 /* FilteredInstanceList.swift */,
 			);
 			path = "List View";
+			sourceTree = "<group>";
+		};
+		AF2524F6242CFD4300C0DF57 /* SunburstDiagram */ = {
+			isa = PBXGroup;
+			children = (
+				AF2524F8242CFD5A00C0DF57 /* Views */,
+				AF2524F7242CFD5200C0DF57 /* Model */,
+			);
+			path = SunburstDiagram;
+			sourceTree = "<group>";
+		};
+		AF2524F7242CFD5200C0DF57 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				AF2524FF242CFDA700C0DF57 /* DataModel.swift */,
+				AF252500242CFDA700C0DF57 /* ViewModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		AF2524F8242CFD5A00C0DF57 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				AF2524FB242CFD8F00C0DF57 /* ArcView.swift */,
+				AF2524F9242CFD8F00C0DF57 /* IfLetView.swift */,
+				AF2524FA242CFD8F00C0DF57 /* SunburstView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 		AF339DCD24195D780060192C /* Triggers */ = {
@@ -374,6 +419,8 @@
 				AF7DAA4E241173EE00D69F5E /* InstanceListView.swift in Sources */,
 				8428221524211F36006F30BF /* ChartView1.swift in Sources */,
 				AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */,
+				AF252506242D377200C0DF57 /* SelectStatisticsView.swift in Sources */,
+				AF2524FD242CFD9000C0DF57 /* SunburstView.swift in Sources */,
 				AF7DAA4C241173BA00D69F5E /* EmptyInstanceView.swift in Sources */,
 				AF72B37D241BC7FF00511401 /* SelectTriggersView.swift in Sources */,
 				AF339DCC24193B120060192C /* ButtonCenteredText.swift in Sources */,
@@ -384,16 +431,21 @@
 				84282229242140C4006F30BF /* InstanceCellHeader.swift in Sources */,
 				AFCBC8222429464F00E35BF4 /* Path.swift in Sources */,
 				AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */,
+				AF2524FC242CFD9000C0DF57 /* IfLetView.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
+				AF252504242D2E3B00C0DF57 /* StatisticsChoiceView.swift in Sources */,
 				AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */,
 				AF7DAA4A241170F700D69F5E /* InstanceView.swift in Sources */,
 				AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */,
 				AF03E4A424182548007207D6 /* FilteredInstanceList.swift in Sources */,
 				AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */,
 				AF339DCF24195D8A0060192C /* AddTriggerView.swift in Sources */,
+				AF252502242CFDA700C0DF57 /* ViewModel.swift in Sources */,
+				AF252501242CFDA700C0DF57 /* DataModel.swift in Sources */,
 				AF7DAA4824116BAA00D69F5E /* AddSymptomView.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,
 				AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */,
+				AF2524FE242CFD9000C0DF57 /* ArcView.swift in Sources */,
 				AF72B3A3241BF75D00511401 /* ObservedInstances.swift in Sources */,
 				AF700C97241A87B800F68F07 /* MultipleSelectionRow.swift in Sources */,
 			);
