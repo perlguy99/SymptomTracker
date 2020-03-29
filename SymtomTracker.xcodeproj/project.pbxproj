@@ -247,22 +247,22 @@
 		AF7DAA1024115B4500D69F5E /* SymtomTracker */ = {
 			isa = PBXGroup;
 			children = (
-				84CACBB824314AC000A68704 /* View Modifiers */,
-				842822182421200D006F30BF /* Statistics */,
-				AF700C93241A878100F68F07 /* Misc Views */,
-				AF7DAA3E24115F7D00D69F5E /* Core Data */,
 				AF7DAA1124115B4500D69F5E /* AppDelegate.swift */,
 				AF7DAA1324115B4500D69F5E /* SceneDelegate.swift */,
 				AF7DAA1824115B4500D69F5E /* ContentView.swift */,
-				AF339DCD24195D780060192C /* Triggers */,
 				AF7DAA512411828E00D69F5E /* Symptoms */,
 				AF7DAA522411829700D69F5E /* Instances */,
+				AF339DCD24195D780060192C /* Triggers */,
+				842822182421200D006F30BF /* Statistics */,
+				AF700C93241A878100F68F07 /* Misc Views */,
+				AF7DAA3E24115F7D00D69F5E /* Core Data */,
+				84CACBB824314AC000A68704 /* View Modifiers */,
+				84CACBBB243150C100A68704 /* Helpers and Extensions */,
 				AF7DAA1A24115B4700D69F5E /* Assets.xcassets */,
 				AF7DAA1F24115B4700D69F5E /* LaunchScreen.storyboard */,
 				AF7DAA2224115B4700D69F5E /* Info.plist */,
 				AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */,
 				AF7DAA1C24115B4700D69F5E /* Preview Content */,
-				84CACBBB243150C100A68704 /* Helpers and Extensions */,
 			);
 			path = SymtomTracker;
 			sourceTree = "<group>";
