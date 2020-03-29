@@ -44,6 +44,7 @@ struct SelectStatisticsView: View {
             }
             
             ButtonCenteredText(title: "Done", handler: { self.presentationMode.wrappedValue.dismiss() })
+                .padding([.bottom], 25)
         }
     }
 }
@@ -51,8 +52,18 @@ struct SelectStatisticsView: View {
 
 
 
-//struct SelectStatisticsView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        SelectStatisticsView()
-//    }
-//}
+struct SelectStatisticsView_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+        
+        let symptom1 = Symptom(context: context)
+        symptom1.id = UUID()
+        symptom1.name = "Test Symptom"
+        
+        let selectedItems: SelectedItems<Symptom> = SelectedItems<Symptom>()
+        selectedItems.addItem(symptom1)
+        
+        return SelectStatisticsView(context: context, selectedItems: selectedItems).environment(\.managedObjectContext, context)
+    }
+}
