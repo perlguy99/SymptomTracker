@@ -10,6 +10,7 @@
 		8428221524211F36006F30BF /* ChartView1.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8428221424211F36006F30BF /* ChartView1.swift */; };
 		84282229242140C4006F30BF /* InstanceCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84282228242140C3006F30BF /* InstanceCellHeader.swift */; };
 		84913C05241C54FE00089327 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 84913C04241C54FE00089327 /* SwiftUICharts */; };
+		84CACBBA24314ADE00A68704 /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CACBB924314ADE00A68704 /* TagText.swift */; };
 		AF03E49524181B61007207D6 /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */; };
 		AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */; };
 		AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */; };
@@ -67,6 +68,7 @@
 /* Begin PBXFileReference section */
 		8428221424211F36006F30BF /* ChartView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView1.swift; sourceTree = "<group>"; };
 		84282228242140C3006F30BF /* InstanceCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceCellHeader.swift; sourceTree = "<group>"; };
+		84CACBB924314ADE00A68704 /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
 		AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -156,6 +158,14 @@
 			path = "List View";
 			sourceTree = "<group>";
 		};
+		84CACBB824314AC000A68704 /* View Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				84CACBB924314ADE00A68704 /* TagText.swift */,
+			);
+			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
 		AF2524F6242CFD4300C0DF57 /* SunburstDiagram */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		AF7DAA1024115B4500D69F5E /* SymtomTracker */ = {
 			isa = PBXGroup;
 			children = (
+				84CACBB824314AC000A68704 /* View Modifiers */,
 				842822182421200D006F30BF /* Statistics */,
 				AF700C93241A878100F68F07 /* Misc Views */,
 				AF7DAA3E24115F7D00D69F5E /* Core Data */,
@@ -443,6 +454,7 @@
 				AF252502242CFDA700C0DF57 /* ViewModel.swift in Sources */,
 				AF252501242CFDA700C0DF57 /* DataModel.swift in Sources */,
 				AF7DAA4824116BAA00D69F5E /* AddSymptomView.swift in Sources */,
+				84CACBBA24314ADE00A68704 /* TagText.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,
 				AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */,
 				AF2524FE242CFD9000C0DF57 /* ArcView.swift in Sources */,

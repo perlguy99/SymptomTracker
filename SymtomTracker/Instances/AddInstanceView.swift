@@ -108,15 +108,3 @@ struct AddInstanceView: View {
     }
 }
 
-
-
-struct TagText: ViewModifier {
-    func body(content: Content) -> some View {
-        content
-            .font(.caption)
-            .padding([.leading, .trailing], 5)
-            .padding([.top, .bottom], 2)
-            .background(Color.blue.opacity(0.5))
-            .cornerRadius(.infinity)
-    }
-}
