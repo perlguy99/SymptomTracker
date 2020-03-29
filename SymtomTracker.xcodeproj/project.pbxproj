@@ -11,6 +11,7 @@
 		84282229242140C4006F30BF /* InstanceCellHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84282228242140C3006F30BF /* InstanceCellHeader.swift */; };
 		84913C05241C54FE00089327 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 84913C04241C54FE00089327 /* SwiftUICharts */; };
 		84CACBBA24314ADE00A68704 /* TagText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CACBB924314ADE00A68704 /* TagText.swift */; };
+		84CACBBD243150FD00A68704 /* UIImage+Resize.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CACBBC243150FD00A68704 /* UIImage+Resize.swift */; };
 		AF03E49524181B61007207D6 /* Instance+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */; };
 		AF03E49624181B61007207D6 /* Instance+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */; };
 		AF03E49724181B61007207D6 /* Trigger+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */; };
@@ -51,7 +52,7 @@
 		AF7DAA5024117EDF00D69F5E /* AddInstanceView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */; };
 		AF7DAA542411840A00D69F5E /* InstanceCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AF7DAA532411840A00D69F5E /* InstanceCell.swift */; };
 		AFBB03B1242BC3E6003E21D6 /* Severity+Enum.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFBB03B0242BC3E6003E21D6 /* Severity+Enum.swift */; };
-		AFCBC8222429464F00E35BF4 /* Path.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCBC8212429464F00E35BF4 /* Path.swift */; };
+		AFCBC8222429464F00E35BF4 /* DocumentPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFCBC8212429464F00E35BF4 /* DocumentPath.swift */; };
 		AFE63D91241AC9C50001C6DE /* TriggerCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFE63D90241AC9C50001C6DE /* TriggerCell.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,6 +70,7 @@
 		8428221424211F36006F30BF /* ChartView1.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartView1.swift; sourceTree = "<group>"; };
 		84282228242140C3006F30BF /* InstanceCellHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InstanceCellHeader.swift; sourceTree = "<group>"; };
 		84CACBB924314ADE00A68704 /* TagText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TagText.swift; sourceTree = "<group>"; };
+		84CACBBC243150FD00A68704 /* UIImage+Resize.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIImage+Resize.swift"; sourceTree = "<group>"; };
 		AF03E48F24181B61007207D6 /* Instance+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataClass.swift"; sourceTree = "<group>"; };
 		AF03E49024181B61007207D6 /* Instance+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Instance+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		AF03E49124181B61007207D6 /* Trigger+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Trigger+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -113,7 +115,7 @@
 		AF7DAA4F24117EDF00D69F5E /* AddInstanceView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddInstanceView.swift; sourceTree = "<group>"; };
 		AF7DAA532411840A00D69F5E /* InstanceCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InstanceCell.swift; sourceTree = "<group>"; };
 		AFBB03B0242BC3E6003E21D6 /* Severity+Enum.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Severity+Enum.swift"; sourceTree = "<group>"; };
-		AFCBC8212429464F00E35BF4 /* Path.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Path.swift; sourceTree = "<group>"; };
+		AFCBC8212429464F00E35BF4 /* DocumentPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentPath.swift; sourceTree = "<group>"; };
 		AFE63D90241AC9C50001C6DE /* TriggerCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TriggerCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -164,6 +166,16 @@
 				84CACBB924314ADE00A68704 /* TagText.swift */,
 			);
 			path = "View Modifiers";
+			sourceTree = "<group>";
+		};
+		84CACBBB243150C100A68704 /* Helpers and Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				AFCBC8212429464F00E35BF4 /* DocumentPath.swift */,
+				AFBB03B0242BC3E6003E21D6 /* Severity+Enum.swift */,
+				84CACBBC243150FD00A68704 /* UIImage+Resize.swift */,
+			);
+			path = "Helpers and Extensions";
 			sourceTree = "<group>";
 		};
 		AF2524F6242CFD4300C0DF57 /* SunburstDiagram */ = {
@@ -250,8 +262,7 @@
 				AF7DAA2224115B4700D69F5E /* Info.plist */,
 				AF7DAA1524115B4500D69F5E /* SymtomTracker.xcdatamodeld */,
 				AF7DAA1C24115B4700D69F5E /* Preview Content */,
-				AFCBC8212429464F00E35BF4 /* Path.swift */,
-				AFBB03B0242BC3E6003E21D6 /* Severity+Enum.swift */,
+				84CACBBB243150C100A68704 /* Helpers and Extensions */,
 			);
 			path = SymtomTracker;
 			sourceTree = "<group>";
@@ -440,7 +451,7 @@
 				AF718FE92416CBA900DDF850 /* InstanceDetailView.swift in Sources */,
 				AFBB03B1242BC3E6003E21D6 /* Severity+Enum.swift in Sources */,
 				84282229242140C4006F30BF /* InstanceCellHeader.swift in Sources */,
-				AFCBC8222429464F00E35BF4 /* Path.swift in Sources */,
+				AFCBC8222429464F00E35BF4 /* DocumentPath.swift in Sources */,
 				AF72B3A1241BDAB200511401 /* SelectedItems.swift in Sources */,
 				AF2524FC242CFD9000C0DF57 /* IfLetView.swift in Sources */,
 				AF7DAA1924115B4500D69F5E /* ContentView.swift in Sources */,
@@ -454,6 +465,7 @@
 				AF252502242CFDA700C0DF57 /* ViewModel.swift in Sources */,
 				AF252501242CFDA700C0DF57 /* DataModel.swift in Sources */,
 				AF7DAA4824116BAA00D69F5E /* AddSymptomView.swift in Sources */,
+				84CACBBD243150FD00A68704 /* UIImage+Resize.swift in Sources */,
 				84CACBBA24314ADE00A68704 /* TagText.swift in Sources */,
 				AF7DAA42241168F500D69F5E /* SymptomsListView.swift in Sources */,
 				AF7DAA1724115B4500D69F5E /* SymtomTracker.xcdatamodeld in Sources */,
