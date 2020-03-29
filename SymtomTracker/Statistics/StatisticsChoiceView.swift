@@ -19,62 +19,41 @@ struct StatisticsChoiceView: View {
         
         NavigationView {
             VStack {
-                Spacer()
-                Text("")
-                Text("Choose which symptoms to display statistics for").font(.headline)
                 
-                Section(header: Text("Choose Symptoms")) {
+                Divider()
+                
+                Section {
                     NavigationLink(destination: SelectStatisticsView(context: context, selectedItems: selectedItems) ) {
-                        Text("Select Symptoms")
+                        Text("Tap to Select Symptoms")
                     }
                 }
+                .padding()
+                Divider()
                 
-                
-                Section(header: Text("Selected Symptoms")) {
-                    HStack {
-                        if self.selectedItems.items.count > 0 {
-                            ForEach(self.selectedItems.items) { item in
-                                Text(item.wrappedName)
-                                    .modifier(TagText())
+                Section(header: Text("Selected Symptoms").font(.largeTitle)) {
+                    VStack {
+                        HStack {
+                            
+                            if self.selectedItems.items.count > 0 {
+                                ForEach(self.selectedItems.items) { item in
+                                    Text(item.wrappedName)
+                                        .modifier(TagText(titleFont: .body, paddingLeadingTrailing: 9, paddingTopBottom: 4))
+                                }
+                            }
+                            else {
+                                Text("None")
+                                    .modifier(TagText(bgColor: Color.orange.opacity(0.75), titleFont: .body, paddingLeadingTrailing: 9, paddingTopBottom: 4))
                             }
                         }
-                        else {
-                            Text("None")
-                                .modifier(TagText())
-                        }
                     }
                 }
-                
+                .padding()
                 
                 Spacer()
             
-//            List {
-//                Section(header: Text("Select For Statistics")) {
-//
-//
-//
-//                    ForEach(symptoms, id: \.self) { symptom in
-//
-////                    NavigationLink(destination: InstanceView(symptom: symptom)) {
-//
-//                        HStack {
-//                            Text(symptom.wrappedName)
-//                            Spacer()
-//                            Text(symptom.instanceCount).font(.caption)
-//
-//                        }
-////                    }  // NavigationLink
-//
-//                    }
-//                    .onDelete(perform: removeItems)
-//                }  // Section
-//
-//
-//
-//            }  // List
-            
             } // VStack
-     
+            .navigationBarTitle(Text("Choose Symptoms"))
+            
         } // NavigationView
     }
     
