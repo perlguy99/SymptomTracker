@@ -29,7 +29,6 @@ struct SymptomsListView: View {
                 .onDelete(perform: removeItems)
             }
         }
-        
     }
     
     

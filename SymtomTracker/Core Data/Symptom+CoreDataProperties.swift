@@ -71,6 +71,12 @@ extension Symptom {
 extension Symptom: Identifiable { }
 
 
+extension Symptom: Comparable {
+    public static func < (lhs: Symptom, rhs: Symptom) -> Bool {
+        lhs.wrappedName < rhs.wrappedName
+    }
+}
+
 // Basically a View Model for the Instances of a Symptom
 extension Symptom {
     
@@ -92,7 +98,6 @@ extension Symptom {
 //
 //        return filtered.sorted { $0.dateTime! > $1.dateTime! }
 //    }
-    
     
     func instancesForPast(days: Int, withSeverity severity: String = "ALL") -> [Instance] {
         var calendar = Calendar.current
