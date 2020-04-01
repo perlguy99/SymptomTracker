@@ -7,17 +7,17 @@
 //
 
 import SwiftUI
+import CoreData
 
-protocol MultiSelectable: Hashable, Comparable {
+protocol MultiSelectable: Hashable, Comparable, NSFetchRequestResult {
     var title: String { get }
 }
 
-struct MultipleSelectionList2<T: MultiSelectable>: View {
-    
+struct MultipleSelectionList<T: MultiSelectable>: View {
     @State var selections: [T] = []
 
     var selectedItems: SelectedItems<T>
-    var items: [T]
+    var items: FetchedResults<T>
     
     var body: some View {
         return List {
@@ -40,36 +40,3 @@ struct MultipleSelectionList2<T: MultiSelectable>: View {
     }
 }
 
-
-struct MultipleSelectionList: View {
-    @State var selections: [Trigger] = []
-
-    var selectedTriggers: SelectedItems<Trigger>
-    var triggers: FetchedResults<Trigger>
-    
-    var body: some View {
-        return List {
-            ForEach(Array(triggers).sorted()) { trigger in
-                MultipleSelectionRow(title: trigger.wrappedName, isSelected: self.selections.contains(trigger) ) {
-                    if self.selections.contains(trigger) {
-                        self.selections.removeAll(where: { $0 == trigger })
-                        self.selectedTriggers.items = self.selections
-                    }
-                    else {
-                        self.selections.append(trigger)
-                        self.selectedTriggers.items = self.selections
-                    }
-                }
-            }
-            .onAppear(perform: {
-                self.selections = self.selectedTriggers.items
-            })
-        }
-    }
-}
-
-//struct MultipleSelectionList_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MultipleSelectionList()
-//    }
-//}

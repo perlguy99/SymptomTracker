@@ -26,7 +26,8 @@ struct SelectTriggersView: View {
                     Text("Please add a trigger")
                 }
                 else {
-                    MultipleSelectionList(selectedTriggers: selectedTriggers, triggers: triggers)
+                    MultipleSelectionList(selectedItems: selectedTriggers, items: triggers)
+
                 }
             }
             
@@ -42,8 +43,6 @@ struct SelectTriggersView: View {
         })
         
     }
-    
-    
 }
 
 //struct SelectTriggersView_Previews: PreviewProvider {

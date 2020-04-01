@@ -9,18 +9,6 @@
 import SwiftUI
 import CoreData
 
-extension Symptom: MultiSelectable {
-    var title: String {
-        get {
-            return wrappedName
-        }
-    }
-    
-    public static func < (lhs: Symptom, rhs: Symptom) -> Bool {
-        lhs.wrappedName < rhs.wrappedName
-    }
-}
-
 
 struct SelectStatisticsView: View {
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var symptoms: FetchedResults<Symptom>
@@ -39,7 +27,7 @@ struct SelectStatisticsView: View {
                     Text("No Symptoms to choose from!")
                 }
                 else {
-                    MultipleSelectionList2(selectedItems: selectedItems, items: symptoms.reversed())
+                    MultipleSelectionList(selectedItems: selectedItems, items: symptoms)
                 }
             }
             

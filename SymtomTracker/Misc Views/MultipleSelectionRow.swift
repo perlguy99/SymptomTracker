@@ -25,9 +25,3 @@ struct MultipleSelectionRow: View {
         }
     }
 }
-
-//struct MultipleSelectionRow_Previews: PreviewProvider {
-//    static var previews: some View {
-//        MultipleSelectionRow()
-//    }
-//}
