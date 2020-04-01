@@ -9,6 +9,21 @@
 import SwiftUI
 import CoreData
 
+struct SymptomRow: View {
+    var symptom: Symptom
+    
+    var body: some View {
+        NavigationLink(destination: InstanceView(symptom: symptom)) {
+            HStack {
+                Text(symptom.wrappedName)
+                Spacer()
+                Text(symptom.instanceCount).font(.caption)
+            }
+        }
+    }
+}
+
+
 struct SymptomsListView: View {
     @Environment(\.managedObjectContext) var context
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var symptoms: FetchedResults<Symptom>
@@ -16,15 +31,8 @@ struct SymptomsListView: View {
     var body: some View {
         List {
             Section(header: Text("Tracked Symptoms")) {
-                
-                ForEach(symptoms, id: \.self) { symptom in
-                    NavigationLink(destination: InstanceView(symptom: symptom)) {
-                        HStack {
-                            Text(symptom.wrappedName)
-                            Spacer()
-                            Text(symptom.instanceCount).font(.caption)
-                        }
-                    }
+                ForEach(symptoms, id : \.self) { symptom in
+                    SymptomRow(symptom : symptom)
                 }
                 .onDelete(perform: removeItems)
             }
