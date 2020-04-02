@@ -17,7 +17,19 @@ struct SymptomsListView: View {
         List {
             Section(header: Text("Tracked Symptoms")) {
                 ForEach(symptoms, id: \.self) { symptom in
-                    SymptomRow(symptom: symptom)
+                    
+                    // TODO: Using this, the rows DON'T auto-update
+//                    SymptomRow(symptom: symptom)
+                    
+                    // TODO: Using this, the rows DO auto-update
+                    NavigationLink(destination: InstanceView(symptom: symptom)) {
+                        HStack {
+                            Text(symptom.wrappedName)
+                            Spacer()
+                            Text(symptom.instanceCount).font(.caption)
+                        }
+                    }
+                    
                 }
                 .onDelete(perform: removeItems)
             }

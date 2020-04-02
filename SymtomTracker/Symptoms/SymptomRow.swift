@@ -10,9 +10,14 @@ import SwiftUI
 
 // TODO: When instanceCount is updated, the UI doesn't update automatically
 struct SymptomRow: View {
-    var symptom: Symptom
+//    @Environment(\.managedObjectContext) var context
+    @ObservedObject var symptom: Symptom
+    
+//    @State var symptom: Symptom
     
     var body: some View {
+        
+        
         NavigationLink(destination: InstanceView(symptom: symptom)) {
             HStack {
                 Text(symptom.wrappedName)
@@ -21,6 +26,12 @@ struct SymptomRow: View {
             }
         }
     }
+    
+    
+    
+    
+    
+    
 }
 
 struct SymptomRow_Previews: PreviewProvider {
