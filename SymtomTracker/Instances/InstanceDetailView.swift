@@ -47,3 +47,15 @@ struct InstanceDetailView: View {
         })
     }
 }
+
+
+struct InstanceDetailView_Previews: PreviewProvider {
+    static var previews: some View {
+        let instance = Instance(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        
+        instance.dateTime = Date()
+        instance.note = "Instance Note"
+
+        return InstanceDetailView(instance: instance)
+    }
+}

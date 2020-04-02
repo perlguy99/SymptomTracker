@@ -18,6 +18,7 @@ struct InstanceCell: View {
                 Text(self.instance.stringDate)
                     .font(.headline)
                     .frame(width: geometry.size.width * 0.31, height: 25)
+                
                 Text(self.instance.stringTime)
                     .font(.footnote)
                     .frame(width: geometry.size.width * 0.12, height: 25)
@@ -41,5 +42,15 @@ struct InstanceCell: View {
 }
 
 
+struct InstanceCell_Previews: PreviewProvider {
+    static var previews: some View {
+        let instance = Instance(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        
+        instance.dateTime = Date()
+        instance.note = "Instance Note"
+
+        return InstanceCell(instance: instance)
+    }
+}
 
 

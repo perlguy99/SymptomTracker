@@ -56,3 +56,9 @@ struct AddSymptomView: View {
     }
 }
 
+
+struct AddSymptomView_Previews: PreviewProvider {
+    static var previews: some View {
+        return AddSymptomView(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+    }
+}

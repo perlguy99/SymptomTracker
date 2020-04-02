@@ -22,8 +22,15 @@ struct TriggerCell: View {
     }
 }
 
-//struct TriggerCell_Previews: PreviewProvider {
-//    static var previews: some View {
-//        TriggerCell()
-//    }
-//}
+struct TriggerCell_Previews: PreviewProvider {
+    
+    static var previews: some View {
+        let trigger  = Trigger(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        trigger.name = "Trigger"
+        
+        var triggers2 = [Trigger]()
+        triggers2.append(trigger)
+
+        return TriggerCell(triggers: triggers2)
+    }
+}

@@ -23,4 +23,11 @@ struct EmptyInstanceView: View {
     }
 }
 
+struct EmptyInstanceView_Previews: PreviewProvider {
+    static var previews: some View {
+        let symptom  = Symptom(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        symptom.name = "Test Symptom"
 
+        return EmptyInstanceView(symptom: symptom)
+    }
+}

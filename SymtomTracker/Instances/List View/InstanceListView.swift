@@ -11,10 +11,6 @@ import SwiftUI
 struct InstanceListView: View {
     let symptom: Symptom
     
-//    let last7 =
-    
-//    @FetchRequest(entity: Instance.entity(), sortDescriptors: [], predicate: symptom, animation: <#T##Animation?#>)
-    
     @FetchRequest(entity: Symptom.entity(), sortDescriptors: [NSSortDescriptor(key: "name", ascending: true)]) var symptoms: FetchedResults<Symptom>
 
     var body: some View {

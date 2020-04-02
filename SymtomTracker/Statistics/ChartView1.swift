@@ -7,7 +7,7 @@
 //
 import UIKit
 import SwiftUI
-import SwiftUICharts
+//import SwiftUICharts
 
 // TODO: - Different View Options
 // * Choose a symptom...

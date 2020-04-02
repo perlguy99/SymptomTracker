@@ -31,10 +31,6 @@ class SortArrow: ObservableObject {
 
 struct InstanceCellHeader: View {
     
-    // TODO: - Make the sorting actually work when tapped
-//    @State private var ascending = false
-//    @State private var symbol    = "↑"
-    
     @ObservedObject var sortArrow = SortArrow.shared
     
     var body: some View {
@@ -74,20 +70,6 @@ struct InstanceCellHeader: View {
     
     func changeSort() {
         sortArrow.ascending.toggle()
-        
-        print("\n")
-        print(String(repeating: "-", count: 40))
-        print(sortArrow.ascending.description)
-        print(String(repeating: "-", count: 40))
-        print("\n")
-        
-//        ascending.toggle()
-//        if ascending == false {
-//            symbol = "↑"
-//        }
-//        else {
-//            symbol = "↓"
-//        }
     }
     
 }

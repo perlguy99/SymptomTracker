@@ -29,7 +29,6 @@ struct AddInstanceView: View {
     var body: some View {
         
         VStack {
-            Text("New \(symptom.wrappedName) Instance").font(.largeTitle)
             
             Form {
                 Section(header: Text("Date of Instance")) {
@@ -72,9 +71,11 @@ struct AddInstanceView: View {
                         }
                     }
                 }
+                
                 ButtonCenteredText(title: "Done", handler: self.addInstance)
             }
         }
+        .navigationBarTitle(Text("New \(symptom.wrappedName) Instance"))
     }
     
     
@@ -108,3 +109,14 @@ struct AddInstanceView: View {
     }
 }
 
+
+
+struct AddInstanceView_Previews: PreviewProvider {
+    static var previews: some View {
+        
+        let symptom  = Symptom(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+        symptom.name = "Test Symptom"
+        
+        return AddInstanceView(symptom: symptom)
+    }
+}

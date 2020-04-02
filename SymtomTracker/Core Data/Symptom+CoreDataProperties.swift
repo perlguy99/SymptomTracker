@@ -138,7 +138,11 @@ extension Symptom {
     }
     
     var instanceCount: String {
-        return "\(instances?.count ?? 0) instance(s)"
+        if instances?.count == 1 {
+            return "\(instances?.count ?? 0) instance"
+        }
+        
+        return "\(instances?.count ?? 0) instances"
     }
     
     

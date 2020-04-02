@@ -47,6 +47,6 @@ struct SelectTriggersView: View {
 
 //struct SelectTriggersView_Previews: PreviewProvider {
 //    static var previews: some View {
-//        SelectTriggersView()
+//        SelectTriggersView(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext, selectedTriggers: SelectedItems<Trigger>())
 //    }
 //}

@@ -56,3 +56,9 @@ struct AddTriggerView: View {
     }
 }
 
+
+struct AddTriggerView_Previews: PreviewProvider {
+    static var previews: some View {
+        return AddTriggerView(context: (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext)
+    }
+}
